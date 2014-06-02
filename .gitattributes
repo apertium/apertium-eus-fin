@@ -5,6 +5,7 @@
 /NEWS -text
 /README -text
 /apertium-eus-fin.eus-fin.dix -text
+/apertium-eus-fin.eus-fin.lrx -text
 /autogen.sh -text
 /configure.ac -text
 texts/tarina.fin.txt -text

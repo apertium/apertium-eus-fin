@@ -15,7 +15,7 @@
     <sdef n="vblex"   c="Regular verb"/>
     <sdef n="v"       c="Verb (fin)"/>
 
-  </sdef>
+  </sdefs>
   <section id="main" type="standard">
 
     <!-- SECTION: Conjunctions -->
@@ -49,7 +49,7 @@
     
     <e><p><l>hizkuntza<s n="n"/></l><r>kieli<s n="n"/></r></p></e>
     <e><p><l>amaia<s n="n"/></l><r>äiti<s n="n"/></r></p></e>
-    <e><p><l>lorategi<s n="n"/></l><r>puutarha<s n="n"/></r></p></e
+    <e><p><l>lorategi<s n="n"/></l><r>puutarha<s n="n"/></r></p></e>
     <e><p><l>txakur<s n="n"/></l><r>koira<s n="n"/></r></p></e>
     <e><p><l>zuhaitz<s n="n"/></l><r>puu<s n="n"/></r></p></e>
     <e><p><l>eguraldi<s n="n"/></l><r>sää<s n="n"/></r></p></e>
@@ -85,7 +85,7 @@
     <e><p><l>asko<s n="adv"/></l><r>paljon<s n="adv"/></r></p></e>
     <e><p><l>oso<s n="adv"/></l><r>paljon<s n="adv"/></r></p></e>
     <e><p><l>oso<s n="adv"/></l><r>kovasti<s n="adv"/></r></p></e>
-    <e><p><l>oso<s n="adv"/></l><r>erittäin<s n="adv"/></r></p></e
+    <e><p><l>oso<s n="adv"/></l><r>erittäin<s n="adv"/></r></p></e>
     <e><p><l>benetan<s n="adv"/></l><r>erittäin<s n="adv"/></r></p></e>
     <e><p><l>gaur<s n="adv"/></l><r>tänään<s n="adv"/></r></p></e>
     <e><p><l>elkarrekin<s n="adv"/></l><r>yhdessä<s n="adv"/></r></p></e>

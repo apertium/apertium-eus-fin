@@ -1,2 +1,10 @@
 * text=auto !eol
+/AUTHORS -text
+/ChangeLog -text
+/Makefile.am -text
+/NEWS -text
+/README -text
 /apertium-eus-fin.eus-fin.dix -text
+/autogen.sh -text
+/configure.ac -text
+texts/tarina.fin.txt -text

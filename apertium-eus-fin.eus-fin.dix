@@ -17,6 +17,34 @@
 
   </sdef>
   <section id="main" type="standard">
+
+    <!-- SECTION: Conjunctions -->
+    <e><p><l>eta<s n="cnjcoo"/></l><r>ja<s n="cnjcoo"/></r></p></e>
+
+    <!-- SECTION: Postpositions -->
+    <e><p><l>aurreko<s n="post"/></l><r>edessä<s n="post"/></r></p></e>
+    <e><p><l>barruan<s n="adv"/></l><r>sisällä<s n="post"/></r></p></e>
+
+    <!-- SECTION: Pronouns -->
+    <e><p><l>ni<s n="prn"/></l><r>minä<s n="prn"/></r></p></e>
+    <e><p><l>zu<s n="prn"/></l><r>sinä<s n="prn"/></r></p></e>
+    <e><p><l>hura<s n="prn"/></l><r>hän<s n="prn"/></r></p></e>
+    <e><p><l>bera<s n="prn"/></l><r>hän<s n="prn"/></r></p></e>
+    <e><p><l>gu<s n="prn"/></l><r>me<s n="prn"/></r></p></e>
+    <e><p><l>zuek<s n="prn"/></l><r>te<s n="prn"/></r></p></e>
+    <e><p><l>haiek<s n="prn"/></l><r>he<s n="prn"/></r></p></e>
+
+
+    <!-- SECTION: Numerals -->
+    <e><p><l>bat<s n="num"/></l><r>yksi<s n="num"/></r></p></e>
+    <e><p><l>bi<s n="num"/></l><r>kasi<s n="num"/></r></p></e>
+    <e><p><l>hiru<s n="num"/></l><r>kolme<s n="num"/></r></p></e>
+    <e><p><l>lau<s n="num"/></l><r>neljä<s n="num"/></r></p></e>
+    <e><p><l>bost<s n="num"/></l><r>viisi<s n="num"/></r></p></e>
+    <e><p><l>sei<s n="num"/></l><r>kuusi<s n="num"/></r></p></e>
+    <e><p><l>zaspi<s n="num"/></l><r>seitsemän<s n="num"/></r></p></e>
+
+
     <!-- SECTION: Nouns -->
     
     <e><p><l>hizkuntza<s n="n"/></l><r>kieli<s n="n"/></r></p></e>
@@ -27,8 +55,6 @@
     <e><p><l>eguraldi<s n="n"/></l><r>sää<s n="n"/></r></p></e>
     <e><p><l>talo<s n="n"/></l><r>talo<s n="n"/></r></p></e>
     <e><p><l>amaia<s n="n"/></l><r>äiti<s n="n"/></r></p></e>
-    <e><p><l>Jaakko<s n="n"/></l><r>Jaakko<s n="n"/></r></p></e>
-    <e><p><l>Miren<s n="n"/></l><r>Miren<s n="n"/></r></p></e>
     <e><p><l>mutil<s n="n"/></l><r>poika<s n="n"/></r></p></e>
     <e><p><l>neska<s n="n"/></l><r>tyttö<s n="n"/></r></p></e>
     <e><p><l>arreba<s n="n"/></l><r>sisko<s n="n"/></r></p></e>
@@ -39,6 +65,20 @@
     <e><p><l>lo<s n="n"/></l><r>uni<s n="n"/></r></p></e>
     <e><p><l>leiho<s n="n"/></l><r>ikkuna<s n="n"/></r></p></e>
     <e><p><l><s n="n"/></l><r><s n="n"/></r></p></e>
+
+    <!-- SECTION: Proper nouns -->
+
+    <e><p><l>Jaakko<s n="np"/><s n="ant"/></l><r>Jaakko<s n="np"/><s n="ant"/></r></p></e>
+    <e><p><l>Miren<s n="np"/><s n="ant"/></l><r>Miren<s n="np"/><s n="ant"/></r></p></e>
+
+    <!-- SECTION: Adjectives -->
+    <e><p><l>atsegin<s n="adj"/></l><r>hyvä<s n="adj"/></r></p></e>
+    <e><p><l>epel<s n="adj"/></l><r>lämmin<s n="adj"/></r></p></e>
+    <e><p><l>hotz<s n="adj"/></l><r>kylmä<s n="adj"/></r></p></e>
+    <e><p><l>handi<s n="adj"/></l><r>iso<s n="adj"/></r></p></e>
+    <e><p><l>txiki<s n="adj"/></l><r>pieni<s n="adj"/></r></p></e>
+    <e><p><l>oriontsu<s n="adj"/></l><r>iloinen<s n="adj"/></r></p></e>
+
 
     <!-- SECTION: Adverbs -->
     <e><p><l>kanpoan<s n="adv"/></l><r>ulkona<s n="adv"/></r></p></e>
@@ -62,42 +102,6 @@
     <e><p><l>jolastu<s n="vblex"/></l><r>leikkiä<s n="v"/></r></p></e>
     <e><p><l>gustu<s n="vblex"/></l><r>pitää<s n="v"/></r></p></e>
 
-    <!-- SECTION: Conjunctions -->
-    <e><p><l>eta<s n="cnjcoo"/></l><r>ja<s n="cnjcoo"/></r></p></e>
-
-    <!-- SECTION: Postpositions -->
-    <e><p><l>aurreko<s n="post"/></l><r>edessä<s n="post"/></r></p></e>
-    <e><p><l>barruan<s n="adv"/></l><r>sisällä<s n="post"/></r></p></e>
-
-    <!-- SECTION: Numerals -->
-    <e><p><l>bat<s n="num"/></l><r>yksi<s n="num"/></r></p></e>
-    <e><p><l>bi<s n="num"/></l><r>kasi<s n="num"/></r></p></e>
-    <e><p><l>hiru<s n="num"/></l><r>kolme<s n="num"/></r></p></e>
-    <e><p><l>lau<s n="num"/></l><r>neljä<s n="num"/></r></p></e>
-    <e><p><l>bost<s n="num"/></l><r>viisi<s n="num"/></r></p></e>
-    <e><p><l>sei<s n="num"/></l><r>kuusi<s n="num"/></r></p></e>
-    <e><p><l>zaspi<s n="num"/></l><r>seitsemän<s n="num"/></r></p></e>
-
-    <!-- SECTION: Adjectives -->
-    <e><p><l>atsegin<s n="adj"/></l><r>hyvä<s n="adj"/></r></p></e>
-    <e><p><l>epel<s n="adj"/></l><r>lämmin<s n="adj"/></r></p></e>
-    <e><p><l>hotz<s n="adj"/></l><r>kylmä<s n="adj"/></r></p></e>
-    <e><p><l>handi<s n="adj"/></l><r>iso<s n="adj"/></r></p></e>
-    <e><p><l>txiki<s n="adj"/></l><r>pieni<s n="adj"/></r></p></e>
-    <e><p><l>oriontsu<s n="adj"/></l><r>iloinen<s n="adj"/></r></p></e>
-
-    <!-- SECTION: Pronouns -->
-    <e><p><l>ni<s n="prn"/></l><r>minä<s n="prn"/></r></p></e>
-    <e><p><l>zu<s n="prn"/></l><r>sinä<s n="prn"/></r></p></e>
-    <e><p><l>hura<s n="prn"/></l><r>hän<s n="prn"/></r></p></e>
-    <e><p><l>bera<s n="prn"/></l><r>hän<s n="prn"/></r></p></e>
-    <e><p><l>gu<s n="prn"/></l><r>me<s n="prn"/></r></p></e>
-    <e><p><l>zuek<s n="prn"/></l><r>te<s n="prn"/></r></p></e>
-    <e><p><l>haiek<s n="prn"/></l><r>he<s n="prn"/></r></p></e>
-
-    <!-- SECTION: Other stuff -->
-    <e><p><l>al<s n="qst"/></l><r>ko<s n="qst"/></r></p></e>
-    <e><p><l>ez<s n="neg"/></l><r>ei<s n="neg"/></r></p></e>
 
   </section>
 </dictionary>

@@ -13,6 +13,8 @@
     <sdef n="prn"     c="Pronoun"/>
     <sdef n="num"     c="Numeral"/>
     <sdef n="adv"     c="Adverb"/>
+    <sdef n="det"     c="Determiner"/>
+    <sdef n="art"     c="Article"/>
     <sdef n="vbsint"  c="Synthetic verb"/>
     <sdef n="vblex"   c="Regular verb"/>
     <sdef n="v"       c="Verb (fin)"/>
@@ -36,6 +38,9 @@
     <e><p><l>zuek<s n="prn"/></l><r>te<s n="prn"/></r></p></e>
     <e><p><l>haiek<s n="prn"/></l><r>he<s n="prn"/></r></p></e>
 
+    <!-- SECTION: Determiners -->
+
+    <e r="LR"><p><l>a<s n="det"/><s n="art"/></l><r></r></p></e>
 
     <!-- SECTION: Numerals -->
     <e><p><l>bat<s n="num"/></l><r>yksi<s n="num"/></r></p></e>
@@ -55,7 +60,7 @@
     <e><p><l>txakur<s n="n"/></l><r>koira<s n="n"/></r></p></e>
     <e><p><l>zuhaitz<s n="n"/></l><r>puu<s n="n"/></r></p></e>
     <e><p><l>eguraldi<s n="n"/></l><r>sää<s n="n"/></r></p></e>
-    <e><p><l>talo<s n="n"/></l><r>talo<s n="n"/></r></p></e>
+    <e><p><l>etxe<s n="n"/></l><r>talo<s n="n"/></r></p></e>
     <e><p><l>amaia<s n="n"/></l><r>äiti<s n="n"/></r></p></e>
     <e><p><l>mutil<s n="n"/></l><r>poika<s n="n"/></r></p></e>
     <e><p><l>neska<s n="n"/></l><r>tyttö<s n="n"/></r></p></e>

@@ -9,6 +9,7 @@ BASENAME=apertium-$(PREFIX1)
 TARGETS_COMMON = $(PREFIX1).automorf.bin $(PREFIX1).autobil.bin $(PREFIX1).autogen.bin \
      $(PREFIX2).autogen.bin \
      $(PREFIX2).automorf.bin \
+     $(PREFIX1).autolex.bin \
      $(PREFIX1).autolex.bin $(PREFIX1).rlx.bin \
      $(PREFIX1).t1x.bin $(PREFIX1).t2x.bin $(PREFIX1).t3x.bin \
      $(PREFIX1).prob
@@ -82,7 +83,6 @@ $(PREFIX1).autolex.bin: $(BASENAME).$(PREFIX1).lrx
 
 $(PREFIX2).autolex.bin: $(BASENAME).$(PREFIX2).lrx
 	lrx-comp $(BASENAME).$(PREFIX2).lrx $@
-
 
 $(PREFIX1).prob: $(AP_LIB1)/$(LANG1).prob
 	cp $< $@

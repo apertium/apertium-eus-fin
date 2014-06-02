@@ -15,7 +15,7 @@
         <file name="eus-fin.autobil.bin"/>
       </program>
       <program name="lrx-proc -m"> 
-        <file name="eus-fin.lrx.bin"/> 
+        <file name="eus-fin.autolex.bin"/> 
       </program> 
       <program name="apertium-transfer -b">
         <file name="apertium-eus-fin.eus-fin.t1x"/>
@@ -31,9 +31,6 @@
       </program>
       <program name="lt-proc $1">
         <file name="eus-fin.autogen.bin"/>
-      </program>
-      <program name="lt-proc -p">
-        <file name="eus-fin.autopgen.bin"/>
       </program>
     </pipeline>
   </mode>
@@ -51,7 +48,7 @@
         <file name="eus-fin.autobil.bin"/>
       </program>
       <program name="lrx-proc -m"> 
-        <file name="eus-fin.lrx.bin"/> 
+        <file name="eus-fin.autolex.bin"/> 
       </program> 
       <program name="apertium-transfer -b">
         <file name="apertium-eus-fin.eus-fin.t1x"/>
@@ -131,7 +128,7 @@
         <file name="eus-fin.autobil.bin"/>
       </program>
       <program name="lrx-proc -m -t">
-        <file name="eus-fin.lrx.bin"/>
+        <file name="eus-fin.autolex.bin"/>
       </program>
     </pipeline>
   </mode>
@@ -149,7 +146,7 @@
         <file name="eus-fin.autobil.bin"/>
       </program>
       <program name="lrx-proc -m"> 
-        <file name="eus-fin.lrx.bin"/> 
+        <file name="eus-fin.autolex.bin"/> 
       </program> 
       <program name="apertium-transfer -b -t">
         <file name="apertium-eus-fin.eus-fin.t1x"/>
@@ -171,7 +168,7 @@
         <file name="eus-fin.autobil.bin"/>
       </program>
       <program name="lrx-proc -m"> 
-        <file name="eus-fin.lrx.bin"/> 
+        <file name="eus-fin.autolex.bin"/> 
       </program> 
       <program name="apertium-transfer -b">
         <file name="apertium-eus-fin.eus-fin.t1x"/>
@@ -197,7 +194,7 @@
         <file name="eus-fin.autobil.bin"/>
       </program>
       <program name="lrx-proc -m"> 
-        <file name="eus-fin.lrx.bin"/> 
+        <file name="eus-fin.autolex.bin"/> 
       </program> 
       <program name="apertium-transfer -b">
         <file name="apertium-eus-fin.eus-fin.t1x"/>

@@ -4,6 +4,8 @@
     <sdef n="n"       c="Noun"/>
     <sdef n="post"    c="Postposition"/>
     <sdef n="adj"     c="Adjective"/>
+    <sdef n="np"      c="Proper noun"/>
+    <sdef n="ant"     c="Anthroponym"/>
     <sdef n="neg"     c="Negation"/>
     <sdef n="qst"     c="Question"/>
     <sdef n="cnjcoo"  c="Conjunction (coordination)"/>

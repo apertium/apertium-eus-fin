@@ -12,7 +12,7 @@ BASENAME=apertium-$(PREFIX1)
 
 TARGETS_COMMON = $(PREFIX1).autobil.bin \
 	$(PREFIX1).automorf.bin $(PREFIX1).autogen.bin $(PREFIX1).t1x.bin $(PREFIX1).t2x.bin $(PREFIX1).t3x.bin \
-	$(PREFIX2).automorf.bin $(PREFIX1).autopgen.bin \
+	$(PREFIX2).automorf.bin \
 	$(PREFIX1).lrx.bin \
         $(PREFIX1).rlx.bin 
 
@@ -108,9 +108,9 @@ $(PREFIX1).t3x.bin: $(BASENAME).$(PREFIX1).t3x
 ## Postgeneration dictionaries
 ###############################################################################
 
-$(PREFIX1).autopgen.bin: $(AP_SRC2)/apertium-$(LANG2).post-$(LANG2).dix
-	apertium-validate-dictionary $<
-	lt-comp lr $< $@
+#$(PREFIX1).autopgen.bin: $(AP_SRC2)/apertium-$(LANG2).post-$(LANG2).dix
+#	apertium-validate-dictionary $<
+#	lt-comp lr $< $@
 
 #$(PREFIX2).autopgen.bin: $(AP_SRC2)/apertium-$(LANG2).post-$(LANG2).dix
 #	apertium-validate-dictionary $<

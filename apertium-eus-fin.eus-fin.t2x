@@ -26,7 +26,7 @@
       <attr-item tags="ine"/>
       <attr-item tags="gen"/>
       <attr-item tags="ins"/>
-      <attr-item tags="loc"/>
+      <attr-item tags="par"/>
       <attr-item tags="abl"/>
     </def-attr>
   </section-def-attrs>

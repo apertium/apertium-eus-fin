@@ -28,6 +28,7 @@
 
     <sdef n="gen"     c="Genitive"/>
     <sdef n="ine"     c="Inessive"/>
+    <sdef n="par"     c="Partitive"/>
 
 
   </sdefs>
@@ -40,6 +41,8 @@
     <e r="LR"><p><l>aurreko<s n="adv"/></l><r>edessä<s n="post"/><s n="gen"/></r></p></e>
     <e r="LR"><p><l>ekin<s n="post"/></l><r>kanssa<s n="post"/><s n="gen"/></r></p></e>
     <e><p><l>barruan<s n="adv"/></l><r>sisällä<s n="post"/><s n="gen"/></r></p></e>
+    <e r="LR"><p><l>atzetik<s n="adv"/><s n="gen"/></l><r>kohti<s n="post"/><s n="par"/></r></p></e>
+
 
     <!-- SECTION: Pronouns -->
     <e><p><l>ni<s n="prn"/></l><r>minä<s n="prn"/></r></p></e>
@@ -99,6 +102,7 @@
     <e><p><l>epel<s n="adj"/></l><r>lämmin<s n="adj"/></r></p></e>
     <e><p><l>hotz<s n="adj"/></l><r>kylmä<s n="adj"/></r></p></e>
     <e><p><l>handi<s n="adj"/></l><r>iso<s n="adj"/></r></p></e>
+    <e><p><l>zahar<s n="adj"/></l><r>vanha<s n="adj"/></r></p></e>
     <e><p><l>txiki<s n="adj"/></l><r>pieni<s n="adj"/></r></p></e>
     <e><p><l>oriontsu<s n="adj"/></l><r>iloinen<s n="adj"/></r></p></e>
 

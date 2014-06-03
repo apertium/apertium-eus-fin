@@ -21,6 +21,12 @@
       <cat-item tags="post"/>
       <cat-item tags="adv.gen"/>
     </def-cat>
+    <def-cat n="adv-gen">
+      <cat-item tags="adv.gen"/>
+    </def-cat>
+    <def-cat n="en">
+      <cat-item tags="post" lemma="en"/>
+    </def-cat>
     <def-cat n="sent">
       <cat-item tags="sent"/>
     </def-cat>
@@ -104,6 +110,21 @@
        </when>
       </choose>
     </def-macro>
+
+    <def-macro n="modify-adj1" npar="1">
+        <choose>
+          <when><test><not><equal><clip pos="1" side="tl" part="a_adj"/><lit v=""/></equal></not></test>
+            <let><clip pos="1" side="tl" part="a_adj"/><lit-tag v="adj.pos"/></let></when>
+        </choose>
+    </def-macro>
+    <def-macro n="modify-adj2" npar="2">
+	<call-macro n="modify-adj1">
+	  <with-param pos="1" />
+        </call-macro>	
+	<call-macro n="modify-adj1">
+	  <with-param pos="2" />
+        </call-macro>
+    </def-macro>
   </section-def-macros>
   <section-rules>
 
@@ -172,6 +193,27 @@
           </out>
           </otherwise>
 	  </choose>
+      </action>
+    </rule>
+
+    <rule comment="REGLA: en adv-gen">
+      <pattern>
+        <pattern-item n="en"/>
+        <pattern-item n="adv-gen"/>
+      </pattern>
+      <action>
+        <out>
+          <chunk name="post" case="caseFirstWord">
+            <tags>
+              <tag><lit-tag v="POST"/></tag>
+              <tag>  <clip pos="2" side="tl" part="case"/></tag>
+            </tags>
+            <lu> 
+               <clip pos="2" side="tl" part="lem"/>
+              <lit-tag v="post" />
+            </lu>
+          </chunk>
+        </out>
       </action>
     </rule>
 
@@ -251,9 +293,6 @@
         <pattern-item n="art"/>
       </pattern>
       <action>
-<!--    <call-macro n="???">
-         something about agreement here?
-        </call-macro> -->
         <choose>
           <when><test><not><equal><clip pos="2" side="tl" part="a_adj"/><lit v=""/></equal></not></test>
             <let><clip pos="2" side="tl" part="a_adj"/><lit-tag v="adj.pos"/></let></when>
@@ -273,6 +312,47 @@
             <lu>
               <clip pos="1" side="tl" part="whole"/>
               <clip pos="3" side="tl" part="number"/>
+              <lit-tag v="2" />
+            </lu>
+          </chunk>
+        </out>
+      </action>
+    </rule> 
+
+
+    <rule comment="REGLA: n mod mod art">
+      <pattern>
+        <pattern-item n="n"/>
+        <pattern-item n="mod"/>
+        <pattern-item n="mod"/>
+        <pattern-item n="art"/>
+      </pattern>
+      <action>
+	<call-macro n="modify-adj2">
+	  <with-param pos="2" />
+	  <with-param pos="3" />
+        </call-macro>
+        <out>
+          <chunk name="mod_mod_n" case="caseFirstWord">
+            <tags> 
+              <tag><lit-tag v="SN"/></tag>
+              <tag><lit-tag v="nom"/></tag> 
+            </tags> 
+            <lu> 
+              <clip pos="3" side="tl" part="whole"/>
+              <clip pos="4" side="tl" part="number"/>
+              <lit-tag v="2" />
+            </lu>
+            <b pos="1"/>
+            <lu>
+              <clip pos="2" side="tl" part="whole"/>
+              <clip pos="4" side="tl" part="number"/>
+              <lit-tag v="2" />
+            </lu>
+            <b pos="2"/>
+            <lu>
+              <clip pos="1" side="tl" part="whole"/>
+              <clip pos="4" side="tl" part="number"/>
               <lit-tag v="2" />
             </lu>
           </chunk>

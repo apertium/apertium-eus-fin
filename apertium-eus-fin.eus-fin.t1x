@@ -2,38 +2,107 @@
 <!-- -*- nxml -*- -->
 <transfer default="chunk">
   <section-def-cats>
-    <def-cat n="nom">
-      <cat-item tags="n.*"/>
+    <def-cat n="n">
+      <cat-item tags="n"/>
+    </def-cat>
+    <def-cat n="prn-pers">
+      <cat-item tags="prn.pers.*"/>
+    </def-cat>
+    <def-cat n="mod">
+      <cat-item tags="adj.izo"/>
+    </def-cat>
+    <def-cat n="num">
+      <cat-item tags="num.*"/>
+    </def-cat>
+    <def-cat n="art">
+      <cat-item tags="det.art.*"/>
+    </def-cat>
+    <def-cat n="post">
+      <cat-item tags="post"/>
+      <cat-item tags="adv.gen"/>
     </def-cat>
     <def-cat n="sent">
       <cat-item tags="sent"/>
+    </def-cat>
+   <def-cat n="ger">
+      <cat-item tags="vblex.ger"/>
+    </def-cat>
+   <def-cat n="ukan-fin">
+      <cat-item lemma="ukan" tags="vbsint.pri.*"/>
     </def-cat>
   </section-def-cats>
   <section-def-attrs>
     <def-attr n="a_nom">
       <attr-item tags="n"/>
     </def-attr>
-    <def-attr n="a_cas">
+    <def-attr n="a_adj">
+      <attr-item tags="adj.izo"/>
+      <attr-item tags="adj.pos"/>
+    </def-attr>
+    <def-attr n="number">
+      <attr-item tags="sg"/>
+      <attr-item tags="pl"/>
+    </def-attr>
+    <def-attr n="screeve">
+      <attr-item tags="pres"/>
+      <attr-item tags="past"/>
+      <attr-item tags="pri"/>
+    </def-attr>
+    <def-attr n="person">
+      <attr-item tags="p1"/>
+      <attr-item tags="p2"/>
+      <attr-item tags="p3"/>
+    </def-attr>
+    <def-attr n="nork">
+      <attr-item tags="NK_HU"/>
+      <attr-item tags="NK_NI"/>
+      <attr-item tags="NK_HK"/>
+    </def-attr>
+    <def-attr n="case">
       <attr-item tags="nom"/>
-      <attr-item tags="acc"/>
-      <attr-item tags="dat"/>
       <attr-item tags="gen"/>
-      <attr-item tags="loc"/>
-      <attr-item tags="ins"/>
+      <attr-item tags="par"/>
+      <attr-item tags="acc"/>
+      <attr-item tags="ine"/>
+      <attr-item tags="ela"/>
+      <attr-item tags="ill"/>
+      <attr-item tags="ade"/>
+      <attr-item tags="all"/>
       <attr-item tags="abl"/>
+      <attr-item tags="ess"/>
+      <attr-item tags="tra"/>
+      <attr-item tags="ins"/>
+      <attr-item tags="com"/>
+      <attr-item tags="abe"/>
     </def-attr>
 
   </section-def-attrs>
   <section-def-vars>
-    <def-var n="number"/>
-    <def-var n="current_verb"/>
+    <def-var n="verb-lema"/>
+    <def-var n="post-case"/>
+    <def-var n="verb-pers"/>
+
   </section-def-vars>
   <section-def-macros>
-    <def-macro n="test" npar="1">
-          <let>
-            <var n="number"/>
-            <lit v=""/>
-          </let>
+    <def-macro n="modify-verb-screeve2" npar="2">
+      <choose>
+	<when>
+           <test><equal><clip pos="2" side="sl" part="screeve"/><lit-tag v="pri"/></equal></test>           <let>
+	      <clip pos="2" side="tl" part="screeve"/>
+	      <lit-tag v="pres"/>
+	   </let>
+       </when>
+      </choose>
+    </def-macro>
+    <def-macro n="set-verb-person1" npar="1">
+      <choose>
+	<when>
+           <test><equal><clip pos="1" side="sl" part="nork"/><lit-tag v="NK_HU"/></equal></test>           <let>
+	      <var n="verb-pers" />
+	      <lit-tag v="p3.sg"/>
+	   </let>
+       </when>
+      </choose>
     </def-macro>
   </section-def-macros>
   <section-rules>
@@ -50,6 +119,217 @@
             </tags>
             <lu>
               <clip pos="1" side="tl" part="whole"/>
+            </lu>
+          </chunk>
+        </out>
+      </action>
+    </rule>
+
+    <rule comment="REGLA: POST">
+      <pattern>
+        <pattern-item n="post"/>
+      </pattern>
+      <action>
+        <choose>
+          <when> 
+            <test><equal><clip pos="1" side="tl" part="case"/><lit v=""/></equal></test>
+            <choose>
+              <when>
+                <test><equal caseless="yes"><clip pos="1" side="sl" part="lem"/><lit v="en"/></equal></test>            
+                <let><var n="post-case"/><lit-tag v="gen"/></let>
+             </when>
+             <when>
+               <test><equal caseless="yes"><clip pos="1" side="sl" part="lem"/><lit v="an"/></equal></test>
+               <let><var n="post-case"/><lit-tag v="ine"/></let>
+            </when>
+          </choose>
+          <out>
+            <chunk name="post" case="caseFirstWord">
+              <tags>
+                <tag><lit-tag v="POST"/></tag>
+                <tag><var n="post-case"/></tag>
+              </tags>
+              <lu>
+                <lit v=""/>
+              </lu>
+            </chunk>
+          </out>
+          </when>
+          <otherwise>
+               <let><var n="post-case"/><clip pos="1" side="tl" part="case"/></let>
+
+          <out>
+            <chunk name="post" case="caseFirstWord">
+              <tags>
+                <tag><lit-tag v="POST"/></tag>
+                <tag><var n="post-case"/></tag>
+              </tags>
+              <lu>
+                <clip pos="1" side="tl" part="lem"/>
+                <lit-tag v="post"/>
+              </lu>
+            </chunk>
+          </out>
+          </otherwise>
+	  </choose>
+      </action>
+    </rule>
+
+    <rule comment="REGLA: n">
+      <pattern>
+        <pattern-item n="n"/>
+      </pattern>
+      <action>
+        <out>
+          <chunk name="n" case="caseFirstWord">
+            <tags>
+              <tag><lit-tag v="SN"/></tag>
+              <tag><lit-tag v="nom"/></tag>
+            </tags>
+            <lu>
+              <clip pos="1" side="tl" part="whole"/>
+              <lit-tag v="sg.2" />
+            </lu>
+          </chunk>
+        </out>
+      </action>
+    </rule>
+
+    <rule comment="REGLA: n art">
+      <pattern>
+        <pattern-item n="n"/>
+        <pattern-item n="art"/>
+      </pattern>
+      <action>
+        <out>
+          <chunk name="n" case="caseFirstWord">
+            <tags>
+              <tag><lit-tag v="SN"/></tag>
+              <tag><lit-tag v="nom"/></tag>
+            </tags>
+            <lu>
+              <clip pos="1" side="tl" part="whole"/>
+              <clip pos="2" side="tl" part="number"/>
+              <lit-tag v="2" />
+            </lu>
+          </chunk>
+        </out>
+      </action>
+    </rule>
+
+    <rule comment="REGLA: num n">
+      <pattern>
+        <pattern-item n="num"/>
+        <pattern-item n="n"/>
+      </pattern>
+      <action>
+
+        <out>
+          <chunk name="mod_n" case="caseFirstWord">
+            <tags> 
+              <tag><lit-tag v="SN"/></tag>
+              <tag><lit-tag v="nom"/></tag> 
+            </tags> 
+            <lu> 
+              <clip pos="1" side="tl" part="whole"/>
+              <lit-tag v="sg.2" />
+            </lu>
+            <b pos="1"/>
+            <lu>
+              <clip pos="2" side="tl" part="whole"/>
+              <lit-tag v="sg.2" />
+            </lu>
+          </chunk>
+        </out>
+      </action>
+    </rule> 
+
+    <rule comment="REGLA: n mod art">
+      <pattern>
+        <pattern-item n="n"/>
+        <pattern-item n="mod"/>
+        <pattern-item n="art"/>
+      </pattern>
+      <action>
+<!--    <call-macro n="???">
+         something about agreement here?
+        </call-macro> -->
+        <choose>
+          <when><test><not><equal><clip pos="2" side="tl" part="a_adj"/><lit v=""/></equal></not></test>
+            <let><clip pos="2" side="tl" part="a_adj"/><lit-tag v="adj.pos"/></let></when>
+        </choose>
+        <out>
+          <chunk name="mod_n" case="caseFirstWord">
+            <tags> 
+              <tag><lit-tag v="SN"/></tag>
+              <tag><lit-tag v="nom"/></tag> 
+            </tags> 
+            <lu> 
+              <clip pos="2" side="tl" part="whole"/>
+              <clip pos="3" side="tl" part="number"/>
+              <lit-tag v="2" />
+            </lu>
+            <b pos="1"/>
+            <lu>
+              <clip pos="1" side="tl" part="whole"/>
+              <clip pos="3" side="tl" part="number"/>
+              <lit-tag v="2" />
+            </lu>
+          </chunk>
+        </out>
+      </action>
+    </rule> 
+
+    <rule comment="REGLA: prn-pers">
+      <pattern>
+        <pattern-item n="prn-pers"/>
+      </pattern>
+      <action>
+<!-- ber<prn><pers><p3><sg>+en<post>$ -->
+        <out>
+          <chunk name="prn" case="caseFirstWord">
+            <tags>
+              <tag><lit-tag v="SN"/></tag>
+              <tag><lit-tag v="nom"/></tag>
+            </tags>
+            <lu>
+              <clip pos="1" side="tl" part="whole"/>
+              <lit-tag v="2" />
+            </lu>
+          </chunk>
+        </out>
+      </action>
+    </rule>
+
+    <rule comment="REGLA: GER UKAN-FIN">
+      <pattern>
+        <pattern-item n="ger"/>
+        <pattern-item n="ukan-fin"/>
+      </pattern>
+      <action>
+        <call-macro n="modify-verb-screeve2">
+	  <with-param pos="1"/>
+	  <with-param pos="2"/>
+        </call-macro> 
+        <call-macro n="set-verb-person1">
+	  <with-param pos="2"/>
+        </call-macro> 
+	<let>
+	   <var n="verb-lema"/>
+	   <clip pos="1" side="tl" part="lem"/>
+        </let>
+	<!-- ^ukan<vbsint><pri><NR_HU><NK_HU> -->
+	<!-- ^näkee/nähdä<vblex><actv><pres><p3><sg>$ -->
+        <out>
+          <chunk namefrom="verb-lema" case="caseFirstWord">
+            <tags>
+              <tag><lit-tag v="SV"/></tag>
+            </tags>
+            <lu>
+              <clip pos="1" side="tl" part="lem"/>
+	      <lit-tag v="vblex.actv"/>
+	      <clip pos="2" side="tl" part="screeve"/>
+	      <var n="verb-pers" />
             </lu>
           </chunk>
         </out>

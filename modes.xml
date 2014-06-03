@@ -7,8 +7,11 @@
       <program name="lt-proc -w">
         <file name="eus-fin.automorf.bin"/>
       </program>
-      <program name="cg-proc  -n -w -1">
+      <program name="cg-proc -w">
         <file name="eus-fin.rlx.bin"/>
+      </program>
+      <program name="apertium-tagger -g">
+        <file name="eus-fin.prob"/>
       </program>
       <program name="apertium-pretransfer"/>
       <program name="lt-proc -b">
@@ -29,8 +32,8 @@
         <file name="apertium-eus-fin.eus-fin.t3x"/>
         <file name="eus-fin.t3x.bin"/>
       </program>
-      <program name="lt-proc $1">
-        <file name="eus-fin.autogen.bin"/>
+      <program name="hfst-proc $1">
+        <file name="eus-fin.autogen.hfst"/>
       </program>
     </pipeline>
   </mode>
@@ -40,8 +43,11 @@
       <program name="lt-proc -w">
         <file name="eus-fin.automorf.bin"/>
       </program>
-      <program name="cg-proc  -n -w -1">
+      <program name="cg-proc -w">
         <file name="eus-fin.rlx.bin"/>
+      </program>
+      <program name="apertium-tagger -g">
+        <file name="eus-fin.prob"/>
       </program>
       <program name="apertium-pretransfer"/>
       <program name="lt-proc -b">
@@ -62,8 +68,8 @@
         <file name="apertium-eus-fin.eus-fin.t3x"/>
         <file name="eus-fin.t3x.bin"/>
       </program>
-      <program name="lt-proc -d">
-        <file name="eus-fin.autogen.bin"/>
+      <program name="hfst-proc -d">
+        <file name="eus-fin.autogen.hfst"/>
       </program>
     </pipeline>
   </mode>
@@ -93,8 +99,11 @@
       <program name="lt-proc -w">
         <file name="eus-fin.automorf.bin"/>
       </program>
-      <program name="cg-proc  -n -w -1">
+      <program name="cg-proc -w">
         <file name="eus-fin.rlx.bin"/>
+      </program>
+      <program name="apertium-tagger -g">
+        <file name="eus-fin.prob"/>
       </program>
       <program name="apertium-pretransfer"/>
     </pipeline>
@@ -105,8 +114,11 @@
       <program name="lt-proc -w">
         <file name="eus-fin.automorf.bin"/>
       </program>
-      <program name="cg-proc  -n -w -1">
+      <program name="cg-proc -w">
         <file name="eus-fin.rlx.bin"/>
+      </program>
+      <program name="apertium-tagger -g">
+        <file name="eus-fin.prob"/>
       </program>
       <program name="apertium-pretransfer"/>
       <program name="lt-proc -b">
@@ -120,8 +132,11 @@
       <program name="lt-proc -w">
         <file name="eus-fin.automorf.bin"/>
       </program>
-      <program name="cg-proc  -n -w -1">
+      <program name="cg-proc  -w">
         <file name="eus-fin.rlx.bin"/>
+      </program>
+      <program name="apertium-tagger -g">
+        <file name="eus-fin.prob"/>
       </program>
       <program name="apertium-pretransfer"/>
       <program name="lt-proc -b">
@@ -138,8 +153,11 @@
       <program name="lt-proc -w">
         <file name="eus-fin.automorf.bin"/>
       </program>
-      <program name="cg-proc -n -w -1">
+      <program name="cg-proc -w">
         <file name="eus-fin.rlx.bin"/>
+      </program>
+      <program name="apertium-tagger -g">
+        <file name="eus-fin.prob"/>
       </program>
       <program name="apertium-pretransfer"/>
       <program name="lt-proc -b">
@@ -160,8 +178,11 @@
       <program name="lt-proc -w">
         <file name="eus-fin.automorf.bin"/>
       </program>
-      <program name="cg-proc -n -w -1">
+      <program name="cg-proc -w">
         <file name="eus-fin.rlx.bin"/>
+      </program>
+      <program name="apertium-tagger -g">
+        <file name="eus-fin.prob"/>
       </program>
       <program name="apertium-pretransfer"/>
       <program name="lt-proc -b">
@@ -186,8 +207,11 @@
       <program name="lt-proc -w">
         <file name="eus-fin.automorf.bin"/>
       </program>
-      <program name="cg-proc -n -w -1">
+      <program name="cg-proc -w">
         <file name="eus-fin.rlx.bin"/>
+      </program>
+      <program name="apertium-tagger -g">
+        <file name="eus-fin.prob"/>
       </program>
       <program name="apertium-pretransfer"/>
       <program name="lt-proc -b">

@@ -6,7 +6,7 @@ PREFIX2=$(LANG2)-$(LANG1)
 
 BASENAME=apertium-$(PREFIX1)
 
-TARGETS_COMMON = $(PREFIX1).automorf.bin $(PREFIX1).autobil.bin $(PREFIX1).autogen.bin \
+TARGETS_COMMON = $(PREFIX1).automorf.bin $(PREFIX1).autobil.bin $(PREFIX1).autogen.bin $(PREFIX1).autogen.hfst \
      $(PREFIX2).autogen.bin \
      $(PREFIX2).automorf.bin \
      $(PREFIX1).autolex.bin \
@@ -23,18 +23,16 @@ $(PREFIX1).autobil.bin: $(BASENAME).$(PREFIX1).dix
 	apertium-validate-dictionary $(BASENAME).$(PREFIX1).dix
 	lt-comp lr $(BASENAME).$(PREFIX1).dix $@
 
-$(PREFIX1).autogen.bin: $(AP_SRC2)/apertium-$(LANG2).$(LANG2).dix
-	apertium-validate-dictionary $<
-	lt-comp rl $< $@
+$(PREFIX1).autogen.hfst: $(AP_SRC2)/$(LANG2).autogen.hfst
+	cp $< $@
 
-$(PREFIX1).autopgen.bin: $(AP_SRC2)/apertium-$(LANG2).post-$(LANG2).dix
-	apertium-validate-dictionary $<
-	lt-comp lr $< $@
+$(PREFIX1).autogen.bin: $(AP_SRC2)/$(LANG2).autogen.att.gz
+	$(ZCAT) $(AP_SRC2)/$(LANG2).autogen.att.gz > .deps/$(LANG2).autogen.att
+	lt-comp lr .deps/$(LANG2).autogen.att $@
 
-$(PREFIX2).automorf.bin: $(AP_SRC2)/apertium-$(LANG2).$(LANG2).dix $(AP_SRC2)/apertium-$(LANG2).$(LANG2).acx
-	apertium-validate-acx $(AP_SRC2)/apertium-$(LANG2).$(LANG2).acx
-	apertium-validate-dictionary $<
-	lt-comp lr $< $@ $(AP_SRC2)/apertium-$(LANG2).$(LANG2).acx
+$(PREFIX2).automorf.bin: $(AP_SRC2)/$(LANG2).automorf.att.gz
+	$(ZCAT) $(AP_SRC2)/$(LANG2).automorf.att.gz > .deps/$(LANG2).automorf.att
+	lt-comp lr .deps/$(LANG2).automorf.att $@
 
 $(PREFIX2).autobil.bin: $(BASENAME).$(PREFIX1).dix
 	apertium-validate-dictionary $<

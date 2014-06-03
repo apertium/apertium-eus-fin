@@ -6,6 +6,9 @@
       <cat-item tags="SN"/>
       <cat-item tags="SN.*"/>
     </def-cat>
+    <def-cat n="POST">
+      <cat-item tags="POST.*"/>
+    </def-cat>
     <def-cat n="SENT">
       <cat-item tags="SENT"/>
     </def-cat>
@@ -17,10 +20,10 @@
       <attr-item tags="sp"/>
       <attr-item tags="ND"/>
     </def-attr>
-    <def-attr n="a_cas">
+    <def-attr n="case">
       <attr-item tags="nom"/>
       <attr-item tags="acc"/>
-      <attr-item tags="dat"/>
+      <attr-item tags="ine"/>
       <attr-item tags="gen"/>
       <attr-item tags="ins"/>
       <attr-item tags="loc"/>
@@ -29,12 +32,11 @@
   </section-def-attrs>
   <section-def-vars>
     <def-var n="number"/>
-    <def-var n="POST"/>
   </section-def-vars>
   <section-def-macros>
     <def-macro n="test1" npar="1">
       <let>
-        <var n="POST"/>
+        <var n="number"/>
         <lit v=""/>
       </let>
     </def-macro>
@@ -50,6 +52,29 @@
             <clip pos="1" part="lem"/>
             <clip pos="1" part="tags"/>
             <clip pos="1" part="chcontent"/>
+          </chunk>
+        </out>
+      </action>
+    </rule>
+
+    <rule comment="REGLA: SN POST">
+      <pattern>
+        <pattern-item n="SN"/>
+        <pattern-item n="POST"/>
+      </pattern>
+      <action>
+        <let><clip pos="1" part="case"/><clip pos="2" part="case"/></let>
+        <out>
+          <chunk>
+            <clip pos="1" part="lem"/>
+            <clip pos="1" part="tags"/>
+            <clip pos="1" part="chcontent"/>
+          </chunk>
+          <b pos="1"/>
+          <chunk>
+            <clip pos="2" part="lem"/>
+            <clip pos="2" part="tags"/>
+            <clip pos="2" part="chcontent"/>
           </chunk>
         </out>
       </action>

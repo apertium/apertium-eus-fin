@@ -36,6 +36,9 @@
    <def-cat n="ukan-fin">
       <cat-item lemma="ukan" tags="vbsint.pri.*"/>
     </def-cat>
+   <def-cat n="vbsint-fin">
+      <cat-item tags="vbsint.pri.*"/>
+    </def-cat>
   </section-def-cats>
   <section-def-attrs>
     <def-attr n="a_nom">
@@ -90,16 +93,18 @@
 
   </section-def-vars>
   <section-def-macros>
-    <def-macro n="modify-verb-screeve2" npar="2">
+
+    <def-macro n="modify-verb-screeve1" npar="1">
       <choose>
 	<when>
-           <test><equal><clip pos="2" side="sl" part="screeve"/><lit-tag v="pri"/></equal></test>           <let>
-	      <clip pos="2" side="tl" part="screeve"/>
+           <test><equal><clip pos="1" side="sl" part="screeve"/><lit-tag v="pri"/></equal></test>           <let>
+	      <clip pos="1" side="tl" part="screeve"/>
 	      <lit-tag v="pres"/>
 	   </let>
        </when>
       </choose>
     </def-macro>
+
     <def-macro n="set-verb-person1" npar="1">
       <choose>
 	<when>
@@ -265,7 +270,6 @@
         <pattern-item n="n"/>
       </pattern>
       <action>
-
         <out>
           <chunk name="mod_n" case="caseFirstWord">
             <tags> 
@@ -279,6 +283,32 @@
             <b pos="1"/>
             <lu>
               <clip pos="2" side="tl" part="whole"/>
+              <lit-tag v="sg.2" />
+            </lu>
+          </chunk>
+        </out>
+      </action>
+    </rule> 
+
+    <rule comment="REGLA: n num">
+      <pattern>
+        <pattern-item n="n"/>
+        <pattern-item n="num"/>
+      </pattern>
+      <action>
+        <out>
+          <chunk name="mod_n" case="caseFirstWord">
+            <tags> 
+              <tag><lit-tag v="SN"/></tag>
+              <tag><lit-tag v="nom"/></tag> 
+            </tags> 
+            <lu> 
+              <clip pos="2" side="tl" part="whole"/>
+              <lit-tag v="sg.2" />
+            </lu>
+            <b pos="1"/>
+            <lu>
+              <clip pos="1" side="tl" part="whole"/>
               <lit-tag v="sg.2" />
             </lu>
           </chunk>
@@ -387,8 +417,7 @@
         <pattern-item n="ukan-fin"/>
       </pattern>
       <action>
-        <call-macro n="modify-verb-screeve2">
-	  <with-param pos="1"/>
+        <call-macro n="modify-verb-screeve1">
 	  <with-param pos="2"/>
         </call-macro> 
         <call-macro n="set-verb-person1">
@@ -409,6 +438,39 @@
               <clip pos="1" side="tl" part="lem"/>
 	      <lit-tag v="vblex.actv"/>
 	      <clip pos="2" side="tl" part="screeve"/>
+	      <var n="verb-pers" />
+            </lu>
+          </chunk>
+        </out>
+      </action>
+    </rule>
+
+    <rule comment="REGLA: VBSINT-FIN">
+      <pattern>
+        <pattern-item n="vbsint-fin"/>
+      </pattern>
+      <action>
+        <call-macro n="modify-verb-screeve1">
+	  <with-param pos="1"/>
+        </call-macro> 
+        <call-macro n="set-verb-person1">
+	  <with-param pos="1"/>
+        </call-macro> 
+	<let>
+	   <var n="verb-lema"/>
+	   <clip pos="1" side="tl" part="lem"/>
+        </let>
+	<!-- ^ukan<vbsint><pri><NR_HU><NK_HU> -->
+	<!-- ^näkee/nähdä<vblex><actv><pres><p3><sg>$ -->
+        <out>
+          <chunk namefrom="verb-lema" case="caseFirstWord">
+            <tags>
+              <tag><lit-tag v="SV"/></tag>
+            </tags>
+            <lu>
+              <clip pos="1" side="tl" part="lem"/>
+	      <lit-tag v="vblex.actv"/>
+	      <clip pos="1" side="tl" part="screeve"/>
 	      <var n="verb-pers" />
             </lu>
           </chunk>

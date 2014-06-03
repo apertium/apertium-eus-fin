@@ -13,6 +13,7 @@
     <sdef n="prn"     c="Pronoun"/>
     <sdef n="num"     c="Numeral"/>
     <sdef n="adv"     c="Adverb"/>
+    <sdef n="preadv"  c="Preadverb"/>
     <sdef n="det"     c="Determiner"/>
     <sdef n="art"     c="Article"/>
     <sdef n="vbsint"  c="Synthetic verb"/>
@@ -25,6 +26,7 @@
     
 
     <sdef n="pl"      c="Plural"/>
+    <sdef n="sg"      c="Singular"/>
 
     <sdef n="gen"     c="Genitive"/>
     <sdef n="ine"     c="Inessive"/>
@@ -36,6 +38,7 @@
 
     <!-- SECTION: Conjunctions -->
     <e><p><l>eta<s n="cnjcoo"/></l><r>ja<s n="cnjcoo"/></r></p></e>
+    <e><p><l>baina<s n="cnjcoo"/></l><r>mutta<s n="cnjcoo"/></r></p></e>
 
     <!-- SECTION: Postpositions -->
     <e r="LR"><p><l>aurreko<s n="adv"/></l><r>edessä<s n="post"/><s n="gen"/></r></p></e>
@@ -58,7 +61,7 @@
     <e r="LR"><p><l>a<s n="det"/><s n="art"/></l><r></r></p></e>
 
     <!-- SECTION: Numerals -->
-    <e><p><l>bat<s n="num"/></l><r>yksi<s n="num"/></r></p></e>
+    <e><p><l>bat<s n="num"/><s n="sg"/></l><r>yksi<s n="num"/><s n="card"/></r></p></e>
     <e><p><l>bi<s n="num"/><s n="pl"/></l><r>kaksi<s n="num"/><s n="card"/></r></p></e>
     <e><p><l>hiru<s n="num"/></l><r>kolme<s n="num"/></r></p></e>
     <e><p><l>lau<s n="num"/></l><r>neljä<s n="num"/></r></p></e>
@@ -71,6 +74,7 @@
     
     <e><p><l>hizkuntza<s n="n"/></l><r>kieli<s n="n"/></r></p></e>
     <e><p><l>buru<s n="n"/></l><r>pää<s n="n"/></r></p></e>
+    <e><p><l>zarata<s n="n"/></l><r>melu<s n="n"/></r></p></e>
     <e><p><l>haur<s n="n"/></l><r>lapsi<s n="n"/></r></p></e>
     <e><p><l>ume<s n="n"/></l><r>lapsi<s n="n"/></r></p></e>
     <e><p><l>amaia<s n="n"/></l><r>äiti<s n="n"/></r></p></e>
@@ -104,7 +108,7 @@
     <e><p><l>handi<s n="adj"/></l><r>iso<s n="adj"/></r></p></e>
     <e><p><l>zahar<s n="adj"/></l><r>vanha<s n="adj"/></r></p></e>
     <e><p><l>txiki<s n="adj"/></l><r>pieni<s n="adj"/></r></p></e>
-    <e><p><l>oriontsu<s n="adj"/></l><r>iloinen<s n="adj"/></r></p></e>
+    <e><p><l>zoriontsu<s n="adj"/></l><r>iloinen<s n="adj"/></r></p></e>
 
 
     <!-- SECTION: Adverbs -->
@@ -113,8 +117,8 @@
     <e><p><l>kanpoan<s n="adv"/></l><r>ulkona<s n="adv"/></r></p></e>
     <e><p><l>asko<s n="adv"/></l><r>paljon<s n="adv"/></r></p></e>
     <e><p><l>oso<s n="adv"/></l><r>paljon<s n="adv"/></r></p></e>
-    <e><p><l>oso<s n="adv"/></l><r>kovasti<s n="adv"/></r></p></e>
-    <e><p><l>oso<s n="adv"/></l><r>erittäin<s n="adv"/></r></p></e>
+    <e><p><l>oso<s n="preadv"/></l><r>kovasti<s n="adv"/></r></p></e>
+    <e><p><l>oso<s n="preadv"/></l><r>erittäin<s n="adv"/></r></p></e>
     <e><p><l>benetan<s n="adv"/></l><r>erittäin<s n="adv"/></r></p></e>
     <e><p><l>gaur<s n="adv"/></l><r>tänään<s n="adv"/></r></p></e>
     <e><p><l>elkarrekin<s n="adv"/></l><r>yhdessä<s n="adv"/></r></p></e>
@@ -127,10 +131,12 @@
     <e><p><l>orain<s n="adv"/></l><r>nyt<s n="adv"/></r></p></e>
     <e><p><l>noski<s n="adv"/></l><r>tietenkin<s n="adv"/></r></p></e>
     <e><p><l>orduan<s n="adv"/></l><r>silloin<s n="adv"/></r></p></e>
+    <e><p><l>orduan<s n="adv"/></l><r>sitten<s n="adv"/></r></p></e>
 
     <!-- SECTION: Verbs -->
     <e><p><l>izan<s n="vbsint"/></l><r>olla<s n="v"/></r></p></e>
     <e><p><l>egon<s n="vbsint"/></l><r>olla<s n="v"/></r></p></e>
+    <e><p><l>etorri<s n="vbsint"/></l><r>tulla<s n="v"/></r></p></e>
     <e><p><l>jolastu<s n="vblex"/></l><r>leikkiä<s n="v"/></r></p></e>
     <e><p><l>gustatu<s n="vblex"/></l><r>pitää<s n="v"/></r></p></e>
     <e><p><l>ikusi<s n="vblex"/></l><r>nähdä<s n="v"/></r></p></e>

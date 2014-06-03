@@ -12,4 +12,5 @@
 /autogen.sh -text
 /configure.ac -text
 /modes.xml -text
+texts/historia.eus.txt -text
 texts/tarina.fin.txt -text

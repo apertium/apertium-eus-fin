@@ -36,6 +36,9 @@
    <def-cat n="ukan-fin">
       <cat-item lemma="ukan" tags="vbsint.pri.*"/>
     </def-cat>
+   <def-cat n="eduki-fin">
+      <cat-item lemma="eduki" tags="vbsint.pri.*"/>
+    </def-cat>
    <def-cat n="vbsint-fin">
       <cat-item tags="vbsint.pri.*"/>
     </def-cat>
@@ -429,6 +432,45 @@
         </let>
 	<!-- ^ukan<vbsint><pri><NR_HU><NK_HU> -->
 	<!-- ^näkee/nähdä<vblex><actv><pres><p3><sg>$ -->
+        <out>
+          <chunk namefrom="verb-lema" case="caseFirstWord">
+            <tags>
+              <tag><lit-tag v="SV"/></tag>
+            </tags>
+            <lu>
+              <clip pos="1" side="tl" part="lem"/>
+	      <lit-tag v="vblex.actv"/>
+	      <clip pos="2" side="tl" part="screeve"/>
+	      <var n="verb-pers" />
+            </lu>
+          </chunk>
+        </out>
+      </action>
+    </rule>
+
+    <rule comment="REGLA: n art post n art eduki-fin">
+<!-- ^mutil<n>+a<det><art><sg>+k<post>$ ^txakurra/txakur<n>+a<det><art><sg>$ ^dauka/eduki<vbsint><pri><NR_HU><NK_HU>$ -->
+      <pattern>
+        <pattern-item n="n"/>
+        <pattern-item n="art"/>
+        <pattern-item n="post"/>
+        <pattern-item n="n"/>
+        <pattern-item n="art"/>
+        <pattern-item n="eduki-fin"/>
+      </pattern>
+      <action>
+        <call-macro n="modify-verb-screeve1">
+	  <with-param pos="6"/>
+        </call-macro> 
+        <call-macro n="set-verb-person1">
+	  <with-param pos="6"/>
+        </call-macro> 
+	<let>
+	   <var n="verb-lema"/>
+	   <clip pos="1" side="tl" part="lem"/>
+        </let>
+	<!-- ^dauka/eduki<vbsint><pri><NR_HU><NK_HU>$ -->
+	<!-- ^olla/on<vblex><actv><pres><p3><sg>$ TODO subject to adessive -->
         <out>
           <chunk namefrom="verb-lema" case="caseFirstWord">
             <tags>

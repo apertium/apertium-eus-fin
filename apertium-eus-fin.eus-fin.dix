@@ -44,7 +44,7 @@
     <e r="LR"><p><l>aurreko<s n="adv"/></l><r>edessä<s n="post"/><s n="gen"/></r></p></e>
     <e r="LR"><p><l>ekin<s n="post"/></l><r>kanssa<s n="post"/><s n="gen"/></r></p></e>
     <e><p><l>barruan<s n="adv"/></l><r>sisällä<s n="post"/><s n="gen"/></r></p></e>
-    <e r="LR"><p><l>atzetik<s n="adv"/><s n="gen"/></l><r>kohti<s n="post"/><s n="par"/></r></p></e>
+    <e r="LR"><p><l>atzetik<s n="adv"/><s n="gen"/></l><r>takaa<s n="post"/><s n="gen"/></r></p></e>
 
 
     <!-- SECTION: Pronouns -->
@@ -136,6 +136,7 @@
     <!-- SECTION: Verbs -->
     <e><p><l>izan<s n="vbsint"/></l><r>olla<s n="v"/></r></p></e>
     <e><p><l>egon<s n="vbsint"/></l><r>olla<s n="v"/></r></p></e>
+    <e><p><l>eduki<s n="vbsint"/></l><r>olla<s n="v"/></r></p></e><!--TODO subject case-->
     <e><p><l>etorri<s n="vbsint"/></l><r>tulla<s n="v"/></r></p></e>
     <e><p><l>jolastu<s n="vblex"/></l><r>leikkiä<s n="v"/></r></p></e>
     <e><p><l>gustatu<s n="vblex"/></l><r>pitää<s n="v"/></r></p></e>

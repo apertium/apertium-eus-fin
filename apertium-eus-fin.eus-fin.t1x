@@ -552,6 +552,34 @@
       </action>
     </rule> 
 
+    <rule comment="REGLA: num n art">
+      <pattern>
+        <pattern-item n="num"/>
+        <pattern-item n="n"/>
+        <pattern-item n="art"/>
+      </pattern>
+      <action>
+        <out>
+          <chunk name="mod_n" case="caseFirstWord">
+            <tags> 
+              <tag><lit-tag v="SN"/></tag>
+              <tag><lit-tag v="nom"/></tag> 
+            </tags> 
+            <lu> 
+              <clip pos="1" side="tl" part="whole"/>
+              <lit-tag v="sg.2" />
+            </lu>
+            <b pos="1"/>
+            <lu>
+              <clip pos="2" side="tl" part="whole"/>
+              <lit-tag v="sg.2" />
+            </lu>
+          </chunk>
+        </out>
+      </action>
+    </rule> 
+
+
     <rule comment="REGLA: n num">
       <pattern>
         <pattern-item n="n"/>

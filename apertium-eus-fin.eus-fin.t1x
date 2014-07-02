@@ -690,6 +690,33 @@
       </action>
     </rule> 
 
+    <rule comment="REGLA: mod art">
+      <pattern>
+        <pattern-item n="mod"/>
+        <pattern-item n="art"/>
+      </pattern>
+      <action>
+        <choose>
+          <when><test><not><equal><clip pos="1" side="tl" part="a_adj"/><lit v=""/></equal></not></test>
+            <let><clip pos="1" side="tl" part="a_adj"/><lit-tag v="adj.pos"/></let></when>
+        </choose>
+        <out>
+          <chunk name="mod" case="caseFirstWord">
+            <tags> 
+              <tag><lit-tag v="SA"/></tag>
+              <tag><lit-tag v="nom"/></tag> 
+            </tags> 
+            <lu>
+              <clip pos="1" side="tl" part="whole"/>
+              <clip pos="2" side="tl" part="number"/>
+              <lit-tag v="2" />
+            </lu>
+          </chunk>
+        </out>
+      </action>
+    </rule> 
+
+
     <rule comment="REGLA: preadv mod art">
       <pattern>
         <pattern-item n="preadv"/>

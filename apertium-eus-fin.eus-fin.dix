@@ -45,6 +45,7 @@
 
     <sdef n="gen"     c="Genitive"/>
     <sdef n="ine"     c="Inessive"/>
+    <sdef n="all"     c="Allative"/>
     <sdef n="par"     c="Partitive"/>
     <sdef n="ins"     c="Instru......"/>
     <sdef n="infe"    c="E infinitive"/>
@@ -71,7 +72,7 @@
     <!-- SECTION: Postpositions -->
     <e r="LR"><p><l>aurreko<s n="adv"/></l><r>edessä<s n="post"/><s n="gen"/></r></p></e>
     <e><p><l>aurrean<s n="adv"/><s n="gen"/></l><r>edessä<s n="post"/><s n="gen"/></r></p></e>
-    <e><p><l>ondoan<s n="adv"/><s n="gen"/></l><r>vieressä><s n="post"/><s n="gen"/></r></p></e>
+    <e><p><l>ondoan<s n="adv"/><s n="gen"/></l><r>vieressä<s n="post"/><s n="gen"/></r></p></e>
     <e><p><l>inguruan<s n="adv"/><s n="gen"/></l><r>ympärillä<s n="post"/><s n="gen"/></r></p></e>
     <e r="LR"><p><l>ekin<s n="post"/></l><r>kanssa<s n="post"/><s n="gen"/></r></p></e>
     <e><p><l>barruan<s n="adv"/></l><r>sisällä<s n="post"/><s n="gen"/></r></p></e>
@@ -172,8 +173,15 @@
 
 
     <!-- SECTION: Adverbs -->
+
+    <e><p><l>han<s n="adv"/></l><r>tuolla<s n="adv"/></r></p></e>
+    <e><p><l>han<s n="adv"/></l><r>tuossa<s n="adv"/></r></p></e>
+
     <e><p><l>non<s n="adv"/><s n="itg"/></l><r>missä<s n="adv"/><s n="itg"/><s n="ine"/></r></p></e>
+    <e><p><l>nora<s n="adv"/><s n="itg"/></l><r>missä<s n="adv"/><s n="itg"/><s n="all"/></r></p></e>
     <e><p><l>zergatik<s n="adv"/><s n="itg"/></l><r>miksi<s n="prn"/><s n="itg"/></r></p></e>
+
+    <e><p><l>horrela<s n="adv"/></l><r>niinpä<s n="adv"/></r></p></e>
     <e><p><l>kanpoan<s n="adv"/></l><r>ulkona<s n="adv"/></r></p></e>
     <e><p><l>asko<s n="adv"/></l><r>paljon<s n="adv"/></r></p></e>
     <e><p><l>oso<s n="adv"/></l><r>paljon<s n="adv"/></r></p></e>

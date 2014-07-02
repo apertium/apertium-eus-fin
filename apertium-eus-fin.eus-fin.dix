@@ -46,6 +46,8 @@
 
     <sdef n="part"    c="Parti......."/>
     <sdef n="rel"     c="Relative"/>
+    <sdef n="dem"     c="Demonstrative"/>
+
   </sdefs>
   <section id="main" type="standard">
     <!-- SECTION: Miscellaneous -->
@@ -62,6 +64,8 @@
     <!-- SECTION: Postpositions -->
     <e r="LR"><p><l>aurreko<s n="adv"/></l><r>edessä<s n="post"/><s n="gen"/></r></p></e>
     <e><p><l>aurrean<s n="adv"/><s n="gen"/></l><r>edessä<s n="post"/><s n="gen"/></r></p></e>
+    <e><p><l>ondoan<s n="adv"/><s n="gen"/></l><r>vieressä><s n="post"/><s n="gen"/></r></p></e>
+    <e><p><l>inguruan<s n="adv"/><s n="gen"/></l><r>ympärillä<s n="post"/><s n="gen"/></r></p></e>
     <e r="LR"><p><l>ekin<s n="post"/></l><r>kanssa<s n="post"/><s n="gen"/></r></p></e>
     <e><p><l>barruan<s n="adv"/></l><r>sisällä<s n="post"/><s n="gen"/></r></p></e>
     <e><p><l>antz<s n="post"/></l><r>kohti<s n="post"/><s n="par"/></r></p></e>
@@ -82,6 +86,7 @@
     <e><p><l>haiek<s n="prn"/></l><r>he<s n="prn"/></r></p></e>
     <e><p><l>eurak<s n="prn"/></l><r>he<s n="prn"/></r></p></e>
     <e><p><l>zer<s n="prn"/><s n="itg"/></l><r>mikä<s n="prn"/><s n="itg"/></r></p></e>
+    <e><p><l>nora<s n="adv"/><s n="itg"/></l><r>minne<s n="prn"/><s n="itg"/></r></p></e>
     <e r="LR"><p><l>n<s n="rel"/></l><r></r></p></e>
     <e><p><l>zerbait<s n="prn"/><s n="ind"/></l><r>jokin<s n="prn"/></r></p></e>
 
@@ -89,6 +94,8 @@
 
     <e r="LR"><p><l>a<s n="det"/><s n="art"/></l><r></r></p></e>
     <e><p><l>guzti<s n="det"/><s n="ind"/></l><r>kaikki<s n="prn"/></r></p></e>
+    <e><p><l>hori<s n="det"/><s n="dem"/></l><r>se<s n="prn"/></r></p></e>
+
     <!-- SECTION: Numerals -->
     <e><p><l>bat<s n="num"/><s n="sg"/></l><r>yksi<s n="num"/><s n="card"/><s n="sg"/></r></p></e>
     <e><p><l>bi<s n="num"/><s n="pl"/></l><r>kaksi<s n="num"/><s n="card"/><s n="sg"/></r></p></e>
@@ -137,7 +144,8 @@
     <e><p><l>nahi<s n="n"/></l><r>haluta<s n="vblex"/><s n="actv"/><s n="infe"/><s n="sg"/><s n="ins"/></r></p></e>
     <e><p><l>leku<s n="n"/></l><r>paikka<s n="n"/></r></p></e>
     <e><p><l>jolas<s n="n"/></l><r>leikki<s n="n"/></r></p></e>
-    <e><p><l>jolas<s n="n"/></l><r>peli<s n="n"/></r></p></e>
+    <!-- <e><p><l>jolas<s n="n"/></l><r>peli<s n="n"/></r></p></e> -->
+    <e><p><l>gustu<s n="n"/></l><r>hauska<s n="n"/></r></p></e>
 
     <!-- SECTION: Proper nouns -->
 
@@ -183,11 +191,14 @@
     <e><p><l>oraindik<s n="adv"/></l><r>vielä<s n="adv"/></r></p></e>
     <e><p><l>poliki<s n="adv"/></l><r>hitaasti<s n="adv"/></r></p></e>
     <e><p><l>ote<s n="part"/></l><r>ehkä<s n="adv"/></r></p></e>
+    <e><p><l>ez<s n="adv"/></l><r>ei<s n="adv"/></r></p></e>
 
     <!-- SECTION: Verbs -->
     <e><p><l>izan<s n="vbsint"/></l><r>olla<s n="vbser"/></r></p></e>
     <e><p><l>ezin<b/>izan<s n="vbper"/></l><r>voida<s n="vaux"/><s n="neg"/></r></p></e>
     <e><p><l>nahi<b/>izan<s n="vbper"/></l><r>haluta<s n="vblex"/></r></p></e>
+    <e><p><l>uste<b/>izan<s n="vbper"/></l><r>luulla<s n="vblex"/></r></p></e>
+    <e><p><l>ari<b/>izan<s n="vbper"/></l><r>olla<s n="vblex"/></r></p></e><!--the V argument of this should be in infma inessive ; hizketan ari naiz ~= olen puhumassa -->
     <e><p><l>korrika<b/>egin<s n="vblex"/></l><r>juosta<s n="vblex"/></r></p></e>
     <e><p><l>hitz<b/>egin<s n="vblex"/></l><r>puhua<s n="vblex"/></r></p></e>
     <e><p><l>aurkitu<s n="vblex"/></l><r>löytää<s n="vblex"/></r></p></e>

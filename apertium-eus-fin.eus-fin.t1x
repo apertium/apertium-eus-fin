@@ -2,6 +2,9 @@
 <!-- -*- nxml -*- -->
 <transfer default="chunk">
   <section-def-cats>
+    <def-cat n="cm">
+      <cat-item tags="cm"/>
+    </def-cat>
     <def-cat n="n">
       <cat-item tags="n"/>
     </def-cat>
@@ -10,6 +13,9 @@
     </def-cat>
     <def-cat n="prn-pers">
       <cat-item tags="prn.pers.*"/>
+    </def-cat>
+    <def-cat n="prn-itg">
+      <cat-item tags="prn.itg.*"/>
     </def-cat>
     <def-cat n="mod">
       <cat-item tags="adj.izo"/>
@@ -39,6 +45,9 @@
     </def-cat>
     <def-cat n="adv-gen">
       <cat-item tags="adv.gen"/>
+    </def-cat>
+    <def-cat n="adv">
+      <cat-item tags="adv"/>
     </def-cat>
     <def-cat n="adv-quant">
       <cat-item lemma="asko" tags="adv"/>
@@ -504,6 +513,28 @@
       </action>
     </rule>
 
+    <rule comment="REGLA: adv cm">
+      <pattern>
+        <pattern-item n="adv"/>
+        <pattern-item n="cm"/>
+      </pattern>
+      <action>
+        <out>
+          <chunk name="adv" case="caseFirstWord">
+            <tags>
+              <tag><lit-tag v="ADV"/></tag>
+              <!-- <tag>  <clip pos="2" side="tl" part="case"/></tag> -->
+            </tags>
+            <lu> 
+	      <clip pos="1" side="tl" part="lem"/>
+              <clip pos="2" side="tl" part="lem"/>
+              <lit-tag v="adv" />
+            </lu>
+          </chunk>
+        </out>
+      </action>
+    </rule>
+
     <rule comment="REGLA: n">
       <pattern>
         <pattern-item n="n"/>
@@ -572,32 +603,32 @@
       </action>
     </rule> 
 
-    <rule comment="REGLA: num n art">
-      <pattern>
-        <pattern-item n="num"/>
-        <pattern-item n="n"/>
-        <pattern-item n="art"/>
-      </pattern>
-      <action>
-        <out>
-          <chunk name="mod_n" case="caseFirstWord">
-            <tags> 
-              <tag><lit-tag v="SN"/></tag>
-              <tag><lit-tag v="nom"/></tag> 
-            </tags> 
-            <lu> 
-              <clip pos="1" side="tl" part="whole"/>
-              <lit-tag v="sg.2" />
-            </lu>
-            <b pos="1"/>
-            <lu>
-              <clip pos="2" side="tl" part="whole"/>
-              <lit-tag v="sg.2" />
-            </lu>
-          </chunk>
-        </out>
-      </action>
-    </rule> 
+    <!-- <rule comment="REGLA: num n art"> -->
+    <!--   <pattern> -->
+    <!--     <pattern-item n="num"/> -->
+    <!--     <pattern-item n="n"/> -->
+    <!--     <pattern-item n="art"/> -->
+    <!--   </pattern> -->
+    <!--   <action> -->
+    <!--     <out> -->
+    <!--       <chunk name="mod_n" case="caseFirstWord"> -->
+    <!--         <tags>  -->
+    <!--           <tag><lit-tag v="SN"/></tag> -->
+    <!--           <tag><lit-tag v="nom"/></tag>  -->
+    <!--         </tags>  -->
+    <!--         <lu>  -->
+    <!--           <clip pos="1" side="tl" part="whole"/> -->
+    <!--           <lit-tag v="sg.2" /> -->
+    <!--         </lu> -->
+    <!--         <b pos="1"/> -->
+    <!--         <lu> -->
+    <!--           <clip pos="2" side="tl" part="whole"/> -->
+    <!--           <lit-tag v="sg.2" /> -->
+    <!--         </lu> -->
+    <!--       </chunk> -->
+    <!--     </out> -->
+    <!--   </action> -->
+    <!-- </rule>  -->
 
 
     <rule comment="REGLA: n num">
@@ -825,8 +856,6 @@
               <clip pos="1" side="tl" part="number"/>
               <lit-tag v="2" />
             </lu>
-
-
           </chunk>
         </out>
       </action>
@@ -835,6 +864,27 @@
     <rule comment="REGLA: prn-pers">
       <pattern>
         <pattern-item n="prn-pers"/>
+      </pattern>
+      <action>
+<!-- ber<prn><pers><p3><sg>+en<post>$ -->
+        <out>
+          <chunk name="prn" case="caseFirstWord">
+            <tags>
+              <tag><lit-tag v="SN"/></tag>
+              <tag><lit-tag v="nom"/></tag>
+            </tags>
+            <lu>
+              <clip pos="1" side="tl" part="whole"/>
+              <lit-tag v="2" />
+            </lu>
+          </chunk>
+        </out>
+      </action>
+    </rule>
+
+    <rule comment="REGLA: prn-itg">
+      <pattern>
+        <pattern-item n="prn-itg"/>
       </pattern>
       <action>
 <!-- ber<prn><pers><p3><sg>+en<post>$ -->
@@ -873,6 +923,47 @@
 	   <clip pos="1" side="tl" part="lem"/>
         </let>
 	<!-- ^ukan<vbsint><pri><NR_HU><NK_HU> -->
+	<!-- ^näkee/nähdä<vblex><actv><pres><p3><sg>$ -->
+        <out>
+          <chunk namefrom="verb-lema" case="caseFirstWord">
+            <tags>
+              <tag><lit-tag v="SV"/></tag>
+              <tag><var n="verb-subtype"/></tag>
+            </tags>
+            <lu>
+              <clip pos="1" side="tl" part="lem"/>
+	      <lit-tag v="vblex.actv"/>
+	      <clip pos="2" side="tl" part="screeve"/>
+	      <var n="verb-pers" />
+            </lu>
+          </chunk>
+        </out>
+      </action>
+    </rule>
+
+    <rule comment="REGLA: N ART POST UKAN-FIN">
+      <pattern>
+        <pattern-item n="n"/>
+	<pattern-item n="art"/>
+	<pattern-item n="post"/>
+        <pattern-item n="ukan-fin"/>
+      </pattern>
+      <action>
+        <call-macro n="modify-verb-screeve1">
+	  <with-param pos="3"/>
+        </call-macro> 
+        <call-macro n="set-verb-person1">
+	  <with-param pos="3"/>
+        </call-macro> 
+	<call-macro n="set-verb-subtype1">
+	  <with-param pos="1"/>
+	  </call-macro>
+	<let>
+	   <var n="verb-lema"/>
+	   <clip pos="1" side="tl" part="lem"/>
+        </let>
+	<!-- ^ukan<vbsint><pri><NR_HU><NK_HU> -->
+	<!-- ^hauska<n>$ -->
 	<!-- ^näkee/nähdä<vblex><actv><pres><p3><sg>$ -->
         <out>
           <chunk namefrom="verb-lema" case="caseFirstWord">

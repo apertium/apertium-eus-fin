@@ -43,6 +43,8 @@
     <sdef n="pl"      c="Plural"/>
     <sdef n="sg"      c="Singular"/>
 
+    <sdef n="pos"     c="Positive"/>
+
     <sdef n="gen"     c="Genitive"/>
     <sdef n="ine"     c="Inessive"/>
     <sdef n="all"     c="Allative"/>
@@ -209,6 +211,7 @@
     <e><p><l>ote<s n="part"/></l><r>ehkä<s n="adv"/></r></p></e>
     <e><p><l>ez<s n="adv"/></l><r>ei<s n="adv"/></r></p></e>
     <e><p><l>arretaz<s n="adv"/></l><r>huolellisesti<s n="adv"/></r></p></e>
+    <e><p><l>pozik<s n="adv"/></l><r>iloinen<s n="adj"/><s n="pos"/></r></p></e>
 
     <!-- SECTION: Verbs -->
     <e><p><l>izan<s n="vbsint"/></l><r>olla<s n="vbser"/></r></p></e>

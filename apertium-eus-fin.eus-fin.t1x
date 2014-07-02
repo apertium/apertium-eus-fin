@@ -515,28 +515,42 @@
       </action>
     </rule>
 
-<!--
-    <rule comment="REGLA: adv cm">
+    <rule comment="REGLA: adv">
       <pattern>
         <pattern-item n="adv"/>
-        <pattern-item n="cm"/>
       </pattern>
       <action>
-        <out>
-          <chunk name="adv" case="caseFirstWord">
-            <tags>
-              <tag><lit-tag v="ADV"/></tag>
-               <tag>  <clip pos="2" side="tl" part="case"/></tag> 
-            </tags>
-            <lu> 
-	      <clip pos="1" side="tl" part="lem"/>
-              <clip pos="2" side="tl" part="lem"/>
-              <lit-tag v="adv" />
-            </lu>
-          </chunk>
-        </out>
+        <choose>
+          <when>
+            <test><equal><clip pos="1" side="tl" part="a_adj"/><lit-tag v="adj.pos"/></equal></test>
+            <out>
+              <chunk name="adj" case="caseFirstWord">
+                <tags>
+                  <tag><lit-tag v="SA"/></tag>
+                  <tag><lit-tag v="nom"/></tag>
+                </tags>
+                <lu> 
+                  <clip pos="1" side="tl" part="whole"/>
+                  <lit-tag v="sg.2"/>
+                </lu>
+              </chunk>
+            </out>
+          </when>
+          <otherwise>        
+            <out>
+              <chunk name="adv" case="caseFirstWord">
+                <tags>
+                  <tag><lit-tag v="ADV"/></tag>
+                </tags>
+                <lu> 
+    	      <clip pos="1" side="tl" part="whole"/>
+                </lu>
+              </chunk>
+            </out>
+          </otherwise>        
+        </choose> 
       </action>
-    </rule>-->
+    </rule>
 
     <rule comment="REGLA: n">
       <pattern>

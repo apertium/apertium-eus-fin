@@ -182,10 +182,11 @@
 	               <lit-tag v="neg"/>
 		</equal>
           </test>
+	  <modify-case><clip pos="1" side="tl" part="lem"/><lit v="aa"/></modify-case>
 	  <let>
 	    <var n="verb-final"/>
 	    <concat>
-	      <lit v="ei"/><lit-tag v="vblex.neg.actv"/>
+	      <get-case-from pos="1"><lit v="ei"/></get-case-from><lit-tag v="vblex.neg.actv"/>
 	      <var n="verb-pers"/>
 	      <lit v="$ ^"/>
 	       <clip pos="1" side="tl" part="lem"/>
@@ -225,10 +226,11 @@
 	  <let>
 	    <var n="verb-final"/>
 	    <concat>
-	      <lit v="ei"/><lit-tag v="vblex.neg.actv"/>
+              <get-case-from pos="2">
+	      <lit v="ei"/></get-case-from><lit-tag v="vblex.neg.actv"/>
 	      <var n="verb-pers"/>
 	      <lit v="$ ^"/>
-	       <clip pos="1" side="tl" part="lem"/>
+	       <get-case-from pos="1"><clip pos="1" side="tl" part="lem"/></get-case-from>
   	       <clip pos="1" side="tl" part="verb-type"/>
 	       <lit-tag v="actv"/>
 	       <clip pos="1" side="tl" part="screeve"/>

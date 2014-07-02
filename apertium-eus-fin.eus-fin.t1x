@@ -887,7 +887,6 @@
         <pattern-item n="prn-itg"/>
       </pattern>
       <action>
-<!-- ber<prn><pers><p3><sg>+en<post>$ -->
         <out>
           <chunk name="prn" case="caseFirstWord">
             <tags>
@@ -962,9 +961,10 @@
 	   <var n="verb-lema"/>
 	   <clip pos="1" side="tl" part="lem"/>
         </let>
+	<!-- ^gustu<n>/hauska<n>$ -->
+	<!-- ^a<det><art><sg>/<sg>$ -->
+	<!-- ^ko<post>/@ko<post>$ -->
 	<!-- ^ukan<vbsint><pri><NR_HU><NK_HU> -->
-	<!-- ^hauska<n>$ -->
-	<!-- ^näkee/nähdä<vblex><actv><pres><p3><sg>$ -->
         <out>
           <chunk namefrom="verb-lema" case="caseFirstWord">
             <tags>

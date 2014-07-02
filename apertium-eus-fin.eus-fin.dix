@@ -2,23 +2,17 @@
   <alphabet></alphabet>
   <sdefs>
     <sdef n="n"       c="Noun"/>
-    <sdef n="post"    c="Postposition"/>
-    <sdef n="spost"   c="Postposition written separately"/>
-    <sdef n="adj"     c="Adjective"/>
     <sdef n="np"      c="Proper noun"/>
     <sdef n="ant"     c="Anthroponym"/>
-    <sdef n="neg"     c="Negation"/>
-    <sdef n="qst"     c="Question"/>
-    <sdef n="cnjcoo"  c="Conjunction (coordination)"/>
-    <sdef n="cnjloc"  c="Locative conjunction wtf"/>
-    <sdef n="cnjadv"  c="Conjunction (adv)"/>
-    <sdef n="cnjsub"  c="Conjunction (subordinate)"/>
+    <sdef n="adj"     c="Adjective"/>
     <sdef n="prn"     c="Pronoun"/>
-    <sdef n="num"     c="Numeral"/>
+
     <sdef n="adv"     c="Adverb"/>
     <sdef n="preadv"  c="Preadverb"/>
+
     <sdef n="det"     c="Determiner"/>
     <sdef n="art"     c="Article"/>
+
     <sdef n="vbsint"  c="Synthetic verb"/>
     <sdef n="vblex"   c="Regular verb"/>
     <sdef n="v"       c="Verb (fin)"/>
@@ -26,13 +20,25 @@
     <sdef n="vbhaver" c="To have"/>
     <sdef n="vbser"   c="To be"/>
     <sdef n="vbper"   c="Personal verb"/>
+
+    <sdef n="num"     c="Numeral"/>
+    <sdef n="card"    c="Cardinal"/>
+
+    <sdef n="post"    c="Postposition"/>
+    <sdef n="spost"   c="Postposition written separately"/>
+    <sdef n="cnjcoo"  c="Conjunction (coordination)"/>
+    <sdef n="cnjloc"  c="Locative conjunction wtf"/>
+    <sdef n="cnjadv"  c="Conjunction (adv)"/>
+    <sdef n="cnjsub"  c="Conjunction (subordinate)"/>
+
     <sdef n="sent"    c="End of sentence"/>
     <sdef n="cm"      c="Comma"/>
-    <sdef n="card"    c="Cardinal"/>
     <sdef n="itg"     c="Interrogative"/>
     <sdef n="foc"     c="Focus word"/>
     <sdef n="enc"     c="Enclitic"/>
     <sdef n="ind"     c="Indefinite"/>
+    <sdef n="neg"     c="Negation"/>
+    <sdef n="qst"     c="Question"/>
 
     <sdef n="pl"      c="Plural"/>
     <sdef n="sg"      c="Singular"/>
@@ -50,6 +56,7 @@
 
   </sdefs>
   <section id="main" type="standard">
+
     <!-- SECTION: Miscellaneous -->
     <e r="LR"><p><l>al<s n="qst"/></l><r/></p></e>
     <e r="LR"><p><l>ba<b/>al<s n="qst"/></l><r/></p></e>

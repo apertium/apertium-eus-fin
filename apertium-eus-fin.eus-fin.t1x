@@ -397,7 +397,10 @@
           </out>
 	  </when>
 	  <when>
-            <test><equal><clip pos="1" side="sl" part="a_post"/><lit-tag v="spost"/></equal></test>
+            <test><and><equal><clip pos="1" side="sl" part="a_post"/><lit-tag v="spost"/></equal>
+	               <not><equal><clip pos="1" side="tl" part="verb-type"/><lit-tag v="vblex"/></equal></not>
+		  </and>
+	  </test>
 	    <out>
             <chunk name="spost" case="caseFirstWord">
               <tags>
@@ -407,6 +410,23 @@
               <lu>
                 <clip pos="1" side="tl" part="lem"/>
                 <clip pos="1" side="tl" part="a_post"/>
+              </lu>
+            </chunk>
+          </out>
+	  </when>
+	  <when>
+	    <test><and><equal><clip pos="1" side="sl" part="a_post"/><lit-tag v="spost"/></equal>
+	               <equal><clip pos="1" side="tl" part="verb-type"/><lit-tag v="vblex"/></equal>
+		  </and>
+	  </test>
+	    <out>
+            <chunk name="spost" case="caseFirstWord">
+              <tags>
+                <tag><lit-tag v="SPOST"/></tag>
+                <tag><lit-tag v="par" /></tag>
+              </tags>
+              <lu>
+                <clip pos="1" side="tl" part="whole"/>
               </lu>
             </chunk>
           </out>

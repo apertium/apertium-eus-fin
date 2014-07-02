@@ -84,19 +84,25 @@
        </when>
        <when>
            <test><and><equal><clip pos="1" part="lem"/><lit v="pitää"/></equal>
-	              <equal><clip pos="2" part="case"/><lit-tag v="dat"/></equal>
-	         </and>
+	              <equal><clip pos="2" part="case"/><lit-tag v="dat"/></equal></and>
 	   </test>           
-           <let>
-              <clip pos="2" part="case"/>
-	      <lit-tag v="nom"/>
-	   </let>
-           <let>
-              <clip pos="3" part="case"/>
-	      <lit-tag v="ela"/>
-	   </let>
+           <let><clip pos="2" part="case"/><lit-tag v="nom"/></let>
+           <let><clip pos="3" part="case"/><lit-tag v="ela"/></let>
+       </when>
+
+      </choose>
+    </def-macro>
+
+    <def-macro n="propagate-verb-valency2" npar="2">
+      <choose>
+          <when>
+           <test><and><equal><clip pos="1" part="lem"/><lit v="kysyä"/></equal>
+	              <equal><clip pos="2" part="case"/><lit-tag v="dat"/></equal></and>
+	   </test>           
+           <let><clip pos="2" part="case"/><lit-tag v="abl"/></let>
        </when>
       </choose>
+
     </def-macro>
 
 
@@ -203,6 +209,32 @@
             <clip pos="3" part="lem"/>
             <clip pos="3" part="tags"/>
             <clip pos="3" part="chcontent"/>
+          </chunk>
+	  <b/>
+          <chunk>
+            <clip pos="2" part="lem"/>
+            <clip pos="2" part="tags"/>
+            <clip pos="2" part="chcontent"/>
+          </chunk>
+        </out>
+      </action>
+    </rule>
+
+    <rule comment="REGLA: SN SV">
+      <pattern>
+        <pattern-item n="SN"/>
+        <pattern-item n="SV"/>
+      </pattern>
+      <action>
+	<call-macro n="propagate-verb-valency2">
+	  <with-param pos="2"/>
+	  <with-param pos="1"/>
+	</call-macro>
+        <out>
+          <chunk>
+            <clip pos="1" part="lem"/>
+            <clip pos="1" part="tags"/>
+            <clip pos="1" part="chcontent"/>
           </chunk>
 	  <b/>
           <chunk>

@@ -11,6 +11,8 @@
     <sdef n="qst"     c="Question"/>
     <sdef n="cnjcoo"  c="Conjunction (coordination)"/>
     <sdef n="cnjloc"  c="Locative conjunction wtf"/>
+    <sdef n="cnjadv"  c="Conjunction (adv)"/>
+    <sdef n="cnjsub"  c="Conjunction (subordinate)"/>
     <sdef n="prn"     c="Pronoun"/>
     <sdef n="num"     c="Numeral"/>
     <sdef n="adv"     c="Adverb"/>
@@ -30,7 +32,7 @@
     <sdef n="itg"     c="Interrogative"/>
     <sdef n="foc"     c="Focus word"/>
     <sdef n="enc"     c="Enclitic"/>
-    
+    <sdef n="ind"     c="Indefinite"/>
 
     <sdef n="pl"      c="Plural"/>
     <sdef n="sg"      c="Singular"/>
@@ -38,8 +40,12 @@
     <sdef n="gen"     c="Genitive"/>
     <sdef n="ine"     c="Inessive"/>
     <sdef n="par"     c="Partitive"/>
+    <sdef n="ins"     c="Instru......"/>
+    <sdef n="infe"    c="E infinitive"/>
+    <sdef n="actv"    c="Active"/>
 
-
+    <sdef n="part"    c="Parti......."/>
+    <sdef n="rel"     c="Relative"/>
   </sdefs>
   <section id="main" type="standard">
     <!-- SECTION: Miscellaneous -->
@@ -51,14 +57,18 @@
     <!-- SECTION: Conjunctions -->
     <e><p><l>eta<s n="cnjcoo"/></l><r>ja<s n="cnjcoo"/></r></p></e>
     <e><p><l>baina<s n="cnjcoo"/></l><r>mutta<s n="cnjcoo"/></r></p></e>
+    <e><p><l>nean<s n="cnjadv"/></l><r>kun<s n="cnjsub"/></r></p></e>
 
     <!-- SECTION: Postpositions -->
     <e r="LR"><p><l>aurreko<s n="adv"/></l><r>edessä<s n="post"/><s n="gen"/></r></p></e>
+    <e><p><l>aurrean<s n="adv"/><s n="gen"/></l><r>edessä<s n="post"/><s n="gen"/></r></p></e>
     <e r="LR"><p><l>ekin<s n="post"/></l><r>kanssa<s n="post"/><s n="gen"/></r></p></e>
     <e><p><l>barruan<s n="adv"/></l><r>sisällä<s n="post"/><s n="gen"/></r></p></e>
     <e><p><l>antz<s n="post"/></l><r>kohti<s n="post"/><s n="par"/></r></p></e>
+    <e><p><l>azpian<s n="adv"/><s n="gen"/></l><r>alla<s n="post"/><s n="gen"/></r></p></e>
     <e><p><l>zehar<s n="spost"/></l><r>läpi<s n="post"/><s n="gen"/></r></p></e>
     <e r="LR"><p><l>gandik<s n="post"/></l><r></r></p></e>
+    <e><p><l>bila<s n="spost"/></l><r>etsiä<s n="vblex"/><s n="actv"/><s n="infe"/><s n="sg"/><s n="ins"/></r></p></e>
     <e r="LR"><p><l>atzetik<s n="adv"/><s n="gen"/></l><r>takaa<s n="post"/><s n="gen"/></r></p></e>
 
 
@@ -71,11 +81,14 @@
     <e><p><l>zuek<s n="prn"/></l><r>te<s n="prn"/></r></p></e>
     <e><p><l>haiek<s n="prn"/></l><r>he<s n="prn"/></r></p></e>
     <e><p><l>eurak<s n="prn"/></l><r>he<s n="prn"/></r></p></e>
+    <e><p><l>zer<s n="prn"/><s n="itg"/></l><r>mikä<s n="prn"/><s n="itg"/></r></p></e>
+    <e r="LR"><p><l>n<s n="rel"/></l><r></r></p></e>
+    <e><p><l>zerbait<s n="prn"/><s n="ind"/></l><r>jokin<s n="prn"/></r></p></e>
 
     <!-- SECTION: Determiners -->
 
     <e r="LR"><p><l>a<s n="det"/><s n="art"/></l><r></r></p></e>
-
+    <e><p><l>guzti<s n="det"/><s n="ind"/></l><r>kaikki<s n="prn"/></r></p></e>
     <!-- SECTION: Numerals -->
     <e><p><l>bat<s n="num"/><s n="sg"/></l><r>yksi<s n="num"/><s n="card"/><s n="sg"/></r></p></e>
     <e><p><l>bi<s n="num"/><s n="pl"/></l><r>kaksi<s n="num"/><s n="card"/><s n="sg"/></r></p></e>
@@ -113,9 +126,18 @@
     <e><p><l>neba<s n="n"/></l><r>veli<s n="n"/></r></p></e>
     <e><p><l>katu<s n="n"/></l><r>kissa<s n="n"/></r></p></e>
     <e><p><l>lo<s n="n"/></l><r>uni<s n="n"/></r></p></e>
+    <e><p><l>ordu<s n="n"/></l><r>tunti<s n="n"/></r></p></e>
+    <e><p><l>ordu<s n="n"/></l><r>aika<s n="n"/></r></p></e>
+    <e><p><l>aulki<s n="n"/></l><r>tuoli<s n="n"/></r></p></e>
     <e><p><l>urte<s n="n"/></l><r>vuosi<s n="n"/></r></p></e>
     <e><p><l>leiho<s n="n"/></l><r>ikkuna<s n="n"/></r></p></e>
+    <e><p><l>animalia<s n="n"/></l><r>eläin<s n="n"/></r></p></e>
     <e><p><l>jende<s n="n"/></l><r>ihminen<s n="n"/><s n="pl"/></r></p></e>
+    <e><p><l>mahai<s n="n"/></l><r>pöytä<s n="n"/></r></p></e>
+    <e><p><l>nahi<s n="n"/></l><r>haluta<s n="vblex"/><s n="actv"/><s n="infe"/><s n="sg"/><s n="ins"/></r></p></e>
+    <e><p><l>leku<s n="n"/></l><r>paikka<s n="n"/></r></p></e>
+    <e><p><l>jolas<s n="n"/></l><r>leikki<s n="n"/></r></p></e>
+    <e><p><l>jolas<s n="n"/></l><r>peli<s n="n"/></r></p></e>
 
     <!-- SECTION: Proper nouns -->
 
@@ -129,6 +151,8 @@
     <e><p><l>handi<s n="adj"/></l><r>iso<s n="adj"/></r></p></e>
     <e><p><l>zahar<s n="adj"/></l><r>vanha<s n="adj"/></r></p></e>
     <e><p><l>txiki<s n="adj"/></l><r>pieni<s n="adj"/></r></p></e>
+    <e><p><l>beste<s n="adj"/></l><r>muu<s n="adj"/></r></p></e>
+    <e><p><l>berdin<s n="adj"/></l><r>sama<s n="adj"/></r></p></e>
     <e><p><l>zoriontsu<s n="adj"/></l><r>iloinen<s n="adj"/></r></p></e>
 
 
@@ -142,6 +166,7 @@
     <e><p><l>oso<s n="preadv"/></l><r>erittäin<s n="adv"/></r></p></e>
     <e><p><l>benetan<s n="adv"/></l><r>erittäin<s n="adv"/></r></p></e>
     <e><p><l>gaur<s n="adv"/></l><r>tänään<s n="adv"/></r></p></e>
+    <e><p><l>ondo<s n="adv"/></l><r>hyvin<s n="adv"/></r></p></e>
     <e><p><l>elkarrekin<s n="adv"/></l><r>yhdessä<s n="adv"/></r></p></e>
     <e><p><l>azkar<s n="adv"/></l><r>nopeasti<s n="adv"/></r></p></e>
     <e><p><l>beti<s n="adv"/></l><r>aina<s n="adv"/></r></p></e>
@@ -157,6 +182,7 @@
     <e><p><l>inoiz<s n="adv"/></l><r>koskaan<s n="adv"/></r></p></e>
     <e><p><l>oraindik<s n="adv"/></l><r>vielä<s n="adv"/></r></p></e>
     <e><p><l>poliki<s n="adv"/></l><r>hitaasti<s n="adv"/></r></p></e>
+    <e><p><l>ote<s n="part"/></l><r>ehkä<s n="adv"/></r></p></e>
 
     <!-- SECTION: Verbs -->
     <e><p><l>izan<s n="vbsint"/></l><r>olla<s n="vbser"/></r></p></e>
@@ -168,15 +194,27 @@
     <e><p><l>egon<s n="vbsint"/></l><r>olla<s n="vbser"/></r></p></e>
     <e><p><l>eduki<s n="vbsint"/></l><r>olla<s n="vbhaver"/></r></p></e>
     <e><p><l>jakin<s n="vbsint"/></l><r>tietää<s n="vblex"/></r></p></e>
+    <e><p><l>joan<s n="vblex"/></l><r>mennä<s n="vblex"/></r></p></e>
+    <e><p><l>esan<s n="vbsint"/></l><r>sanoa<s n="vblex"/></r></p></e>
+    <e><p><l>esan<s n="vblex"/></l><r>sanoa<s n="vblex"/></r></p></e>
+    <e><p><l>edan<s n="vblex"/></l><r>juoda<s n="vblex"/></r></p></e>
     <e><p><l>etorri<s n="vbsint"/></l><r>tulla<s n="vblex"/></r></p></e>
     <e><p><l>jolastu<s n="vblex"/></l><r>leikkiä<s n="vblex"/></r></p></e>
     <e><p><l>ezkutatu<s n="vblex"/></l><r>piiloutua<s n="vblex"/></r></p></e>
     <e><p><l>gustatu<s n="vblex"/></l><r>pitää<s n="vblex"/></r></p></e>
     <e><p><l>ikusi<s n="vblex"/></l><r>nähdä<s n="vblex"/></r></p></e>
+    <e><p><l>ibili<s n="vbsint"/></l><r>kävellä<s n="vblex"/></r></p></e>
     <e><p><l>ibili<s n="vblex"/></l><r>kävellä<s n="vblex"/></r></p></e>
     <e><p><l>entzun<s n="vblex"/></l><r>kuulla<s n="vblex"/></r></p></e>
     <e><p><l>jaso<s n="vblex"/></l><r>saada<s n="vblex"/></r></p></e>
+    <e><p><l>jan<s n="vblex"/></l><r>syödä<s n="vblex"/></r></p></e>
+    <e><p><l>hasi<s n="vblex"/></l><r>aloittaa<s n="vblex"/></r></p></e>
+    <e><p><l>hasi<s n="vblex"/></l><r>alkaa<s n="vblex"/></r></p></e>
+    <e><p><l>hasi<s n="vblex"/></l><r>aloittaa<s n="vblex"/></r></p></e>
     <e><p><l>zenbatu<s n="vblex"/></l><r>laskea<s n="vblex"/></r></p></e>
+    <e><p><l>begiratu<s n="vblex"/></l><r>katsoa<s n="vblex"/></r></p></e>
+    <e><p><l>galdetu<s n="vblex"/></l><r>kysyä<s n="vblex"/></r></p></e>
+    <e><p><l>bukatu<s n="vblex"/></l><r>lopettaa<s n="vblex"/></r></p></e>
 
     <!-- SECTION: Punctuation -->
     <e><p><l>.<s n="sent"/></l><r>.<s n="sent"/></r></p></e>

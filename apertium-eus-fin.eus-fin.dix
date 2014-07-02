@@ -68,6 +68,7 @@
     <e><p><l>eta<s n="cnjcoo"/></l><r>ja<s n="cnjcoo"/></r></p></e>
     <e><p><l>baina<s n="cnjcoo"/></l><r>mutta<s n="cnjcoo"/></r></p></e>
     <e><p><l>nean<s n="cnjadv"/></l><r>kun<s n="cnjsub"/></r></p></e>
+    <e><p><l>ordea<s n="cnjloc"/></l><r>mutta<s n="cnjcoo"/></r></p></e>
 
     <!-- SECTION: Postpositions -->
     <e r="LR"><p><l>aurreko<s n="adv"/></l><r>edessä<s n="post"/><s n="gen"/></r></p></e>
@@ -193,7 +194,7 @@
     <e><p><l>elkarrekin<s n="adv"/></l><r>yhdessä<s n="adv"/></r></p></e>
     <e><p><l>azkar<s n="adv"/></l><r>nopeasti<s n="adv"/></r></p></e>
     <e><p><l>beti<s n="adv"/></l><r>aina<s n="adv"/></r></p></e>
-    <e><p><l>atzo<s n="adv"/></l><r>mutta<s n="adv"/></r></p></e>
+    <e><p><l>atzo<s n="adv"/></l><r>eilen<s n="adv"/></r></p></e>
     <e><p><l>baina<s n="adv"/></l><r>mutta<s n="adv"/></r></p></e>
     <e><p><l>berriz<s n="cnjloc"/></l><r>taas<s n="adv"/></r></p></e>
     <e><p><l>ezin<s n="adv"/></l><r>silloin<s n="adv"/></r></p></e>

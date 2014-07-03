@@ -19,6 +19,7 @@
     </def-cat>
     <def-cat n="mod">
       <cat-item tags="adj.izo"/>
+      <cat-item tags="adj.izl"/>
     </def-cat>
     <def-cat n="k">
       <cat-item tags="post" lemma="k"/>
@@ -89,6 +90,7 @@
     </def-attr>
     <def-attr n="a_adj">
       <attr-item tags="adj.izo"/>
+      <attr-item tags="adj.izl"/>
       <attr-item tags="adj.pos"/>
     </def-attr>
     <def-attr n="a_adv">

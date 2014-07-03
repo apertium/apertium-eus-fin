@@ -101,6 +101,14 @@
 	   </test>           
            <let><clip pos="2" part="case"/><lit-tag v="abl"/></let>
        </when>
+       <otherwise>
+         <choose>
+           <when>
+             <test><equal><clip pos="2" part="case"/><lit-tag v="dat"/></equal></test>           
+             <let><clip pos="2" part="case"/><lit-tag v="abl"/></let> <!-- CHECK CASE -->
+           </when>
+         </choose>
+       </otherwise>
       </choose>
 
     </def-macro>
@@ -219,6 +227,34 @@
         </out>
       </action>
     </rule>
+
+    <rule comment="REGLA: SV SN">
+      <pattern>
+        <pattern-item n="SV"/>
+        <pattern-item n="SN"/>
+      </pattern>
+      <action>
+	<call-macro n="propagate-verb-valency2">
+	  <with-param pos="1"/>
+	  <with-param pos="2"/>
+	</call-macro>
+        <out>
+          <chunk>
+            <clip pos="1" part="lem"/>
+            <clip pos="1" part="tags"/>
+            <clip pos="1" part="chcontent"/>
+          </chunk>
+	  <b/>
+          <chunk>
+            <clip pos="2" part="lem"/>
+            <clip pos="2" part="tags"/>
+            <clip pos="2" part="chcontent"/>
+          </chunk>
+        </out>
+      </action>
+    </rule>
+
+
 
     <rule comment="REGLA: SN SV">
       <pattern>

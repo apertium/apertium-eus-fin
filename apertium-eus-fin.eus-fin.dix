@@ -253,6 +253,7 @@
     <e><p><l>eseri<s n="vblex"/></l><r>istua<s n="vblex"/></r></p></e>
     <e><p><l>egin<s n="vblex"/></l><r>tehdä<s n="vblex"/></r></p></e>
     <e><p><l>barrezka<b/>ari<b/>izan<s n="vbper"/></l><r>nauraa<s n="vblex"/></r></p></e> <!-- ughhhh! -->
+    <e><p><l>barre<b/>egin<s n="vblex"/></l><r>nauraa<s n="vblex"/></r></p></e> <!-- ughhhh! -->
 
     <!-- SECTION: Punctuation -->
     <e><p><l>.<s n="sent"/></l><r>.<s n="sent"/></r></p></e>

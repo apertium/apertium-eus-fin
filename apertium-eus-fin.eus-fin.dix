@@ -68,9 +68,11 @@
 
     <!-- SECTION: Conjunctions -->
     <e><p><l>eta<s n="cnjcoo"/></l><r>ja<s n="cnjcoo"/></r></p></e>
+    <e><p><l>ezta<s n="cnjcoo"/></l><r>eikä<s n="cnjcoo"/></r></p></e>
     <e><p><l>baina<s n="cnjcoo"/></l><r>mutta<s n="cnjcoo"/></r></p></e>
     <e><p><l>nean<s n="cnjadv"/></l><r>kun<s n="cnjsub"/></r></p></e>
     <e><p><l>ordea<s n="cnjloc"/></l><r>mutta<s n="cnjcoo"/></r></p></e>
+    <e><p><l>la<s n="cnjsub"/></l><r>että<s n="cnjsub"/></r></p></e>
 
     <!-- SECTION: Postpositions -->
     <e r="LR"><p><l>aurreko<s n="adv"/></l><r>edessä<s n="post"/><s n="gen"/></r></p></e>
@@ -104,6 +106,7 @@
     <!-- SECTION: Determiners -->
 
     <e r="LR"><p><l>a<s n="det"/><s n="art"/></l><r></r></p></e>
+    <e><p><l>bat ere<s n="det"/></l><r>myöskään<s n="adv"/></r></p></e>
     <e><p><l>guzti<s n="det"/><s n="ind"/></l><r>kaikki<s n="prn"/></r></p></e>
     <e><p><l>hori<s n="det"/><s n="dem"/></l><r>se<s n="prn"/></r></p></e>
 

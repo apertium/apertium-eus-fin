@@ -220,7 +220,7 @@
       </let>
       <choose>
         <when>
-	  <test><equal><clip pos="2" side="sl" part="lem"/>
+	  <test><equal caseless="yes"><clip pos="2" side="sl" part="lem"/>
 	               <lit v="ez"/>
 		</equal>
           </test>

@@ -78,6 +78,7 @@
       <cat-item lemma="eduki" tags="vbsint.pri.*"/>
     </def-cat>
    <def-cat n="vbsint-fin">
+      <cat-item tags="vbsint.pii.*"/>
       <cat-item tags="vbsint.pri.*"/>
       <cat-item tags="vbper.*"/>
     </def-cat>
@@ -692,13 +693,13 @@
               <tag><lit-tag v="nom"/></tag> 
             </tags> 
             <lu> 
-              <clip pos="2" side="tl" part="whole"/>
+              <get-case-from pos="1"><clip pos="2" side="tl" part="whole"/></get-case-from>
               <clip pos="3" side="tl" part="number"/>
               <lit-tag v="2" />
             </lu>
             <b pos="1"/>
             <lu>
-              <clip pos="1" side="tl" part="whole"/>
+              <get-case-from pos="2"><clip pos="1" side="tl" part="whole"/></get-case-from>
               <clip pos="3" side="tl" part="number"/>
               <lit-tag v="2" />
             </lu>
@@ -1043,7 +1044,7 @@
             <lu>
               <clip pos="1" side="tl" part="lem"/>
 	      <lit-tag v="vblex.actv"/>
-	      <clip pos="2" side="tl" part="screeve"/>
+	      <clip pos="4" side="tl" part="screeve"/>
 	      <var n="verb-pers" />
             </lu>
           </chunk>
@@ -1093,6 +1094,7 @@
         </out>
       </action>
     </rule>
+
 
     <rule comment="REGLA: PP UKAN-FIN">
       <pattern>

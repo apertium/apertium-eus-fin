@@ -41,6 +41,9 @@
       <cat-item tags="spost"/>
       <cat-item tags="adv.gen"/>
     </def-cat>
+    <def-cat n="cnjsub-ba">
+      <cat-item tags="cnjsub" lemma="ba"/>
+    </def-cat>
     <def-cat n="preadv">
       <cat-item tags="preadv"/>
     </def-cat>
@@ -1321,6 +1324,44 @@
             <lu>
 	      <var n="verb-final" />
             </lu>
+          </chunk>
+        </out>
+      </action>
+    </rule>
+
+    <rule comment="REGLA: BA VBSINT-FIN">
+      <pattern>
+	<pattern-item n="cnjsub-ba"/>
+        <pattern-item n="vbsint-fin"/>
+      </pattern>
+      <action>
+        <call-macro n="set-verb-person1">
+	  <with-param pos="2"/>
+        </call-macro> 
+        <call-macro n="modify-verb-screeve1">
+	  <with-param pos="2"/>
+        </call-macro> 
+	<call-macro n="set-verb-subtype1">
+	  <with-param pos="2"/>
+	</call-macro>
+	<call-macro n="generate-verb-final1">
+	  <with-param pos="2"/>
+	</call-macro>
+	  
+        <out>
+          <chunk namefrom="verb-lema" case="caseFirstWord">
+            <tags>
+              <tag><lit-tag v="SV"/></tag>
+              <tag><var n="verb-subtype"/></tag>
+            </tags>
+	    <mlu>
+            <lu>
+	      <var n="verb-final" />
+            </lu>
+            <lu>
+	      <clip pos="1" side="tl" part="whole" />
+            </lu>
+	    </mlu>
           </chunk>
         </out>
       </action>

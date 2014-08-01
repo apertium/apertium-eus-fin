@@ -64,6 +64,7 @@
     <e r="LR"><p><l>al<s n="qst"/></l><r/></p></e>
     <e r="LR"><p><l>ba<b/>al<s n="qst"/></l><r/></p></e>
     <e><p><l>ba<s n="foc"/></l><r>han<s n="enc"/></r></p></e>
+    <e><p><l>ba<s n="cnjsub"/></l><r>kin<s n="enc"/></r></p></e>
     
 
     <!-- SECTION: Conjunctions -->
@@ -73,6 +74,8 @@
     <e><p><l>nean<s n="cnjadv"/></l><r>kun<s n="cnjsub"/></r></p></e>
     <e><p><l>ordea<s n="cnjloc"/></l><r>mutta<s n="cnjcoo"/></r></p></e>
     <e><p><l>la<s n="cnjsub"/></l><r>että<s n="cnjsub"/></r></p></e>
+    <e><p><l>nahiz<s n="cnjadv"/></l><r>vaikka<s n="cnjsub"/></r></p></e>
+    <e><p><l>nahiz<b/>eta<s n="cnjadv"/></l><r>vaikka<s n="cnjsub"/></r></p></e>
 
     <!-- SECTION: Postpositions -->
     <e r="LR"><p><l>aurreko<s n="adv"/></l><r>edessä<s n="post"/><s n="gen"/></r></p></e>
@@ -215,6 +218,8 @@
     <e><p><l>ez<s n="adv"/></l><r>ei<s n="adv"/></r></p></e>
     <e><p><l>arretaz<s n="adv"/></l><r>huolellisesti<s n="adv"/></r></p></e>
     <e><p><l>pozik<s n="adv"/></l><r>iloinen<s n="adj"/><s n="pos"/></r></p></e>
+    <e><p><l>segur<b/>aski<s n="adv"/></l><r>varmasti<s n="adv"/></r></p></e>
+    <e><p><l>gero<s n="adv"/></l><r>jälkeen<s n="adv"/></r></p></e>
 
     <!-- SECTION: Verbs -->
     <e><p><l>izan<s n="vbsint"/></l><r>olla<s n="vbser"/></r></p></e>

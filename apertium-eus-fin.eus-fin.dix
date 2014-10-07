@@ -109,9 +109,10 @@
     <!-- SECTION: Determiners -->
 
     <e r="LR"><p><l>a<s n="det"/><s n="art"/></l><r></r></p></e>
-    <e><p><l>bat ere<s n="det"/></l><r>myöskään<s n="adv"/></r></p></e>
+    <e><p><l>bat<b/>ere<s n="det"/></l><r>myöskään<s n="adv"/></r></p></e>
     <e><p><l>guzti<s n="det"/><s n="ind"/></l><r>kaikki<s n="prn"/></r></p></e>
     <e><p><l>hori<s n="det"/><s n="dem"/></l><r>se<s n="prn"/></r></p></e>
+    <e><p><l>hau<s n="det"/><s n="dem"/></l><r>tämä<s n="prn"/><s n="dem"/></r></p></e>
 
     <!-- SECTION: Numerals -->
     <e><p><l>bat<s n="num"/><s n="sg"/></l><r>yksi<s n="num"/><s n="card"/><s n="sg"/></r></p></e>

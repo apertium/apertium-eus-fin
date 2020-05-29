@@ -1,4 +1,3 @@
-VERSION=0.1.0
 LANG1=eus
 LANG2=fin
 PREFIX1=$(LANG1)-$(LANG2)
@@ -14,6 +13,8 @@ TARGETS_COMMON = $(PREFIX1).automorf.bin $(PREFIX1).autobil.bin $(PREFIX1).autog
      $(PREFIX1).t1x.bin $(PREFIX1).t2x.bin $(PREFIX1).t3x.bin \
      $(PREFIX1).prob
 
+@ap_include@
+
 $(PREFIX1).automorf.bin: $(AP_SRC1)/apertium-$(LANG1).$(LANG1).dix $(AP_SRC1)/apertium-$(LANG1).$(LANG1).acx
 	apertium-validate-acx $(AP_SRC1)/apertium-$(LANG1).$(LANG1).acx
 	apertium-validate-dictionary $<
@@ -27,11 +28,11 @@ $(PREFIX1).autogen.hfst: $(AP_SRC2)/$(LANG2).autogen.hfst
 	cp $< $@
 
 $(PREFIX1).autogen.bin: $(AP_SRC2)/$(LANG2).autogen.att.gz
-	$(ZCAT) $(AP_SRC2)/$(LANG2).autogen.att.gz > .deps/$(LANG2).autogen.att
+	$(MKDIR_P) .deps && $(ZCAT) $(AP_SRC2)/$(LANG2).autogen.att.gz > .deps/$(LANG2).autogen.att
 	lt-comp lr .deps/$(LANG2).autogen.att $@
 
 $(PREFIX2).automorf.bin: $(AP_SRC2)/$(LANG2).automorf.att.gz
-	$(ZCAT) $(AP_SRC2)/$(LANG2).automorf.att.gz > .deps/$(LANG2).automorf.att
+	$(MKDIR_P) .deps && $(ZCAT) $(AP_SRC2)/$(LANG2).automorf.att.gz > .deps/$(LANG2).automorf.att
 	lt-comp lr .deps/$(LANG2).automorf.att $@
 
 $(PREFIX2).autobil.bin: $(BASENAME).$(PREFIX1).dix
@@ -88,17 +89,6 @@ $(PREFIX1).prob: $(AP_SRC1)/$(LANG1).prob
 $(PREFIX2).prob: $(AP_SRC2)/$(LANG2).prob
 	cp $< $@
 
-###############################################################################
-## Translation modes
-###############################################################################
-
-# All modes are created by this one goal
-modes/$(PREFIX1).mode: modes.xml
-	apertium-validate-modes modes.xml
-	apertium-gen-modes modes.xml
-	cp *.mode modes/
-
-
 EXTRA_DIST=$(BASENAME).$(PREFIX1).dix \
            $(BASENAME).$(PREFIX1).lrx \
            $(BASENAME).$(PREFIX2).lrx \
@@ -109,22 +99,12 @@ EXTRA_DIST=$(BASENAME).$(PREFIX1).dix \
 
 apertium_eus_fin_DATA=$(TARGETS_COMMON) modes.xml
 
-apertium_modesdir=$(prefix)/share/apertium/modes/
 apertium_eus_findir=$(prefix)/share/apertium/apertium-$(PREFIX1)/
 
 # All modes are created by the same goal, listing several will just give problems with make -j2
 noinst_DATA=modes/$(PREFIX1).mode
 
-
-install-data-local:
-	mv modes modes.bak
-	$(prefix)/bin/apertium-gen-modes modes.xml $(BASENAME)
-	rm -rf modes
-	mv modes.bak modes
-	test -d $(DESTDIR)$(apertium_modesdir) || mkdir $(DESTDIR)$(apertium_modesdir)
-	modes=`xmllint --xpath '//mode[@install="yes"]/@name' modes.xml | sed 's/ *name="\([^"]*\)"/\1.mode /g'`; \
-		$(INSTALL_DATA) $$modes $(DESTDIR)$(apertium_modesdir); \
-		rm $$modes
+install-data-local: install-modes
 	$(INSTALL_DATA) $(BASENAME).$(PREFIX1).t1x $(DESTDIR)$(apertium_eus_findir)
 	$(INSTALL_DATA) $(BASENAME).$(PREFIX1).t2x $(DESTDIR)$(apertium_eus_findir)
 	$(INSTALL_DATA) $(BASENAME).$(PREFIX1).t3x $(DESTDIR)$(apertium_eus_findir)
@@ -132,5 +112,4 @@ install-data-local:
 	$(INSTALL_DATA) $(BASENAME).$(PREFIX2).t2x $(DESTDIR)$(apertium_eus_findir)
 	$(INSTALL_DATA) $(BASENAME).$(PREFIX3).t3x $(DESTDIR)$(apertium_eus_findir)
 
-
-CLEANFILES = -rf $(TARGETS_COMMON) modes
+CLEANFILES = -rf $(TARGETS_COMMON)
